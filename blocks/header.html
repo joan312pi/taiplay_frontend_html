@@ -1,0 +1,161 @@
+<header id="header" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyStartAt': 0, 'stickyChangeLogo': true, 'stickyHeaderContainerHeight': 70}">
+    
+    <div class="header-body border-0 box-shadow-none">
+        <div class="header-container container">
+            <div class="header-row">
+                <div class="header-column">
+                    <div class="header-row">
+                        <div class="header-logo">
+                            <a href="index.html" title="TaiPlay旅遊行程規劃平台">
+                                <h1>
+                                    <img alt="TaiPlay旅遊行程規劃平台" data-sticky-width="130" data-sticky-height="64" data-sticky-top="0" src="img/logo.svg">
+                                </h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-column justify-content-end">
+                    <div class="header-row">
+
+                        <div class="header-nav header-nav-line order-2 order-md-1">
+
+                            <button class="btn header-btn-collapse-nav-login d-md-none toggle-btn" data-target=".header-nav-login nav" title="會員專區">
+                                <i class="fa fa-user" aria-hidden="true"></i><span class="sr-only">會員專區</span>
+                            </button>
+
+                            <button class="btn header-btn-collapse-nav toggle-btn" data-target=".header-nav-main nav">
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
+
+                            <!--mobile login start-->
+                            <div class="header-nav-login d-md-none">
+                                <nav class="collapse">
+                                    <ul class="nav nav-pills">
+                                        <!-- <li class="user_mobile">
+                                            <i class="fa-solid fa-circle-user" aria-hidden="true"></i> 王小明
+                                        </li> -->
+                                        <li>
+                                            <a href="login.html"><i class="fa-solid fa-right-to-bracket"></i>會員登入</a>
+                                        </li>
+                                        <li>
+                                            <a href="member_edit.html"><i class="fa-regular fa-address-card"></i>會員資料</a>
+                                        </li>
+                                        <li>
+                                            <a href="member_password.html"><i class="fa-solid fa-key"></i>密碼變更</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa-solid fa-right-from-bracket"></i>登出</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!--mobile login end-->
+
+                            <div class="header-nav-main">
+                                <nav class="collapse">
+                                    <ul class="nav nav-pills" id="mainNav">
+
+                                        <!-- <li class="dropdown">
+                                            <a class="dropdown-item dropdown-toggle" href="#">
+                                                第一層
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item 2nd" tabindex="-1" href="#">第二層</a>
+                                                </li>
+                                            </ul>
+                                        </li> -->
+
+                                        <li>
+                                            <a href="#" title="達人分享">達人分享</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="place.html" title="探索景點">探索景點</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="trip.html" title="建立行程"><span class="btn_01"><i class="fa-solid fa-plus pe-1"></i>  建立行程</span></a>
+                                        </li>
+
+                                        <li class="login d-none d-md-block">
+                                            <a href="login.html" title="會員登入"><i class="fa-solid fa-circle-user" aria-hidden="true"></i></a>
+                                        </li>
+
+                                        <li class="dropdown login d-none d-md-block">
+                                            <a class="dropdown-item dropdown-toggle member_btn" href="#" title="會員管理">
+                                                <!-- <i class="fa-solid fa-circle-user" aria-hidden="true"></i> -->
+                                                <img src="img/300x300.png" style="background: url(img/customer/member_pic.jpg);background-size: cover;background-position: center center;">
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item 2nd" tabindex="-1" href="member_edit.html"><i class="fa-regular fa-address-card"></i>會員資料</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item 2nd" tabindex="-1" href="member_password.html"><i class="fa-solid fa-key"></i>密碼變更</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item 2nd" tabindex="-1" href="#"><i class="fa-solid fa-right-from-bracket"></i>登出</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- <button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
+                                <i class="fas fa-bars"></i>
+                            </button> -->
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--go top start-->
+<script>
+    $(function () {
+        $(".scroll-to-top").attr("title", "回頂端");
+        document.getElementById("web_top").innerHTML = "回頂端";
+    });
+</script>
+<!--go top end-->
+
+<script>
+    // $(function () {
+    //     $("#header").removeAttr("style"); 
+    //     $(".header-logo").removeAttr("style"); 
+    // });
+    document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.toggle-btn');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetSelector = this.getAttribute('data-target');
+            const targetNav = document.querySelector(targetSelector);
+            
+            // 檢查當前目標是否已經是展開狀態
+            const isOpen = targetNav.classList.contains('show');
+
+            // 1. 將所有相關選單全部關閉（統一加上 closed，移除 show）
+            buttons.forEach(btn => {
+                const sel = btn.getAttribute('data-target');
+                const nav = document.querySelector(sel);
+                if (nav) {
+                    nav.classList.remove('show');
+                    nav.classList.add('closed');
+                }
+            });
+
+            // 2. 如果剛剛點擊的原本是關閉的，就將它展開；如果是開啟的則維持關閉
+            if (!isOpen) {
+                targetNav.classList.remove('closed');
+                targetNav.classList.add('show');
+            }
+        });
+    });
+});
+</script>
