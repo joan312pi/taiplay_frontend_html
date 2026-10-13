@@ -7811,7 +7811,7 @@ if( $('[data-copy-to-clipboard]').length ) {
 				wrapper: $('body'),
 				offset: 150,
 				buttonClass: 'scroll-to-top',
-				iconClass: 'fas fa-chevron-up',
+				iconClass: 'fas fa-angles-up',
 				delay: 1000,
 				visibleMobile: false,
 				label: false,

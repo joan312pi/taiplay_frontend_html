@@ -31,7 +31,7 @@ body {
   padding: 0;
   line-height: 170%;
   font-family: "微軟正黑體", "open-sans", Times New Roman, sans-serif;
-  color: #333;
+  color: #666;
   background: #fff;
   font-size: 1em;
   position: relative;
@@ -232,7 +232,7 @@ li {
 
 .scroll-to-top {
   border-radius: 30px 30px 0 0 !important;
-  padding: 10px 5px 35px;
+  padding: 15px 5px 35px !important;
   background: #0c7678 !important;
   opacity: 0.5 !important;
 }
@@ -773,6 +773,9 @@ img::-moz-selection {
   font-size: 2em;
   font-weight: bold;
   color: #22a5a8;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  border-bottom: solid 1px #FAC535;
 }
 
 /*index_link*/
@@ -858,6 +861,11 @@ img::-moz-selection {
   width: 100%;
   padding: 30px 0 50px 0;
 }
+.index_news .index_title {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
+}
 .index_news .list {
   float: left;
   width: 100%;
@@ -895,8 +903,86 @@ img::-moz-selection {
 .index_place {
   float: left;
   width: 100%;
-  background: #fff;
-  padding: 50px 0;
+  background: #FFF8E0;
+  padding: 80px 0;
+}
+.index_place .container {
+  position: relative;
+}
+.index_place .nav {
+  position: absolute;
+  left: 165px;
+  top: -6px;
+}
+.index_place .nav .nav-item {
+  padding: 3px;
+  cursor: pointer;
+}
+.index_place .nav .nav-item a {
+  padding: 3px 15px;
+  border: solid 1px #22a5a8;
+  color: #22a5a8;
+  border-radius: 30px;
+  font-weight: bold;
+}
+.index_place .nav .nav-item a.active {
+  background-color: #0c7678;
+  border: solid 1px #0c7678;
+  color: #fff;
+}
+.index_place .list {
+  float: left;
+  width: 100%;
+}
+.index_place .list .item {
+  float: left;
+  width: 20%;
+  padding: 10px;
+}
+.index_place .list .item .favorite_icon {
+  position: absolute;
+}
+.index_place .list .item .box {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.index_place .list .item .box img {
+  width: 100%;
+}
+.index_place .list .item .box .font {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 30px 20px 15px 20px;
+  color: #fff;
+  background: linear-gradient(transparent 10%, rgba(0, 0, 0, 0.6) 30%);
+}
+.index_place .list .item .box .font .title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.index_place .list .item a:hover .font {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  text-align: center;
+  padding-top: 65%;
+}
+
+.favorite_icon {
+  color: #fff;
+  border: none;
+  background: transparent;
+  z-index: 99;
+  top: 20px;
+  right: 20px;
+}
+.favorite_icon i {
+  transition: transform 0.2s ease;
+}
+.favorite_icon.active i {
+  color: #22a5a8;
+  transform: scale(1.1);
 }
 
 /*footer*/

@@ -129,3 +129,46 @@ $(function () {
 	
 })
 //#endregion
+
+//#region 我的最愛訂單
+document.addEventListener('DOMContentLoaded', function() {
+  const favoriteButtons = document.querySelectorAll('.favorite_icon');
+  
+  if (favoriteButtons.length === 0) {
+    console.warn('找不到 .favorite_icon 元素，請檢查 HTML 類別名稱是否正確。');
+    return;
+  }
+
+  favoriteButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      this.classList.toggle('active');
+      const icon = this.querySelector('i');
+      
+      if (this.classList.contains('active')) {
+        icon.classList.remove('fa-regular');
+        icon.classList.add('fa-solid');
+      } else {
+        icon.classList.remove('fa-solid');
+        icon.classList.add('fa-regular');
+      }
+    });
+  });
+});
+// const favoriteButtons = document.querySelectorAll('.favorite_icon');
+
+// favoriteButtons.forEach(button => {
+//   button.addEventListener('click', function() {
+//     this.classList.toggle('active');
+//     const icon = this.querySelector('i');
+    
+//     if (this.classList.contains('active')) {
+//       icon.classList.replace('fa-regular', 'fa-solid');
+//     } else {
+//       icon.classList.replace('fa-solid', 'fa-regular');
+//     }
+//   });
+// });
+//#endregion
