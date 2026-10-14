@@ -130,45 +130,60 @@ $(function () {
 })
 //#endregion
 
-//#region 我的最愛訂單
+//#region 加入收藏愛心
 document.addEventListener('DOMContentLoaded', function() {
-  const favoriteButtons = document.querySelectorAll('.favorite_icon');
+  // 初始化 Bootstrap 5 Modal
+  const modalElement = document.getElementById('favoriteModal');
+  const bsModal = new bootstrap.Modal(modalElement);
   
-  if (favoriteButtons.length === 0) {
-    console.warn('找不到 .favorite_icon 元素，請檢查 HTML 類別名稱是否正確。');
-    return;
-  }
+  const confirmBtn = document.getElementById('confirmFavoriteBtn');
+  let targetButton = null; // 記錄目前點擊的愛心按鈕
 
-  favoriteButtons.forEach(button => {
-    button.addEventListener('click', function(e) {
+  // 1. 點擊愛心按鈕時，攔截預設行為並開啟 BS5 Modal
+  document.addEventListener('click', function(e) {
+    const btn = e.target.closest('.favorite_icon');
+    if (btn) {
       e.preventDefault();
       e.stopPropagation();
 
-      this.classList.toggle('active');
-      const icon = this.querySelector('i');
-      
-      if (this.classList.contains('active')) {
-        icon.classList.remove('fa-regular');
-        icon.classList.add('fa-solid');
-      } else {
-        icon.classList.remove('fa-solid');
-        icon.classList.add('fa-regular');
-      }
-    });
+      targetButton = btn; // 暫存該按鈕
+      bsModal.show();     // 顯示 BS5 彈窗
+    }
+  });
+
+  // 2. 點擊 Modal 內的「確認送出」按鈕
+  confirmBtn.addEventListener('click', function() {
+    if (targetButton) {
+      // 加上 active 並置換為實心愛心
+      targetButton.classList.add('active');
+      const icon = targetButton.querySelector('i');
+      icon.classList.remove('fa-regular');
+      icon.classList.add('fa-solid');
+
+      // 這裡可以加入 Ajax 傳送至後端儲存
+      console.log('已成功加入收藏！');
+    }
+
+    // 關閉 Modal
+    bsModal.hide();
+    targetButton = null;
+  });
+
+  // 3. 如果點擊取消或關閉視窗，清除暫存按鈕（圖示維持空心）
+  modalElement.addEventListener('hidden.bs.modal', function() {
+    targetButton = null;
   });
 });
-// const favoriteButtons = document.querySelectorAll('.favorite_icon');
-
-// favoriteButtons.forEach(button => {
-//   button.addEventListener('click', function() {
-//     this.classList.toggle('active');
-//     const icon = this.querySelector('i');
-    
-//     if (this.classList.contains('active')) {
-//       icon.classList.replace('fa-regular', 'fa-solid');
-//     } else {
-//       icon.classList.replace('fa-solid', 'fa-regular');
-//     }
-//   });
-// });
 //#endregion
+
+//#region 收藏列表
+$(document).on('change', '.favorite_type input[type="checkbox"]', function() {
+    const $item = $(this).closest('.item');
+    if ($(this).is(':checked')) {
+        $item.addClass('active');
+    } else {
+        $item.removeClass('active');
+    }
+});
+//#endregion
+

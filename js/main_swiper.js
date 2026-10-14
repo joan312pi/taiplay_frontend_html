@@ -162,11 +162,11 @@ $(function($) {
 
 
 	//index_link
-	var swiper3 = new Swiper(".banner_03", {
-		loop: true,
+	var swiper3 = new Swiper(".place_banner", {
+		loop: false,
 		// slidesPerView: 2,
-		spaceBetween: 45,
-		autoplay:true,//自動播放
+		spaceBetween: 10,
+		autoplay:false,//自動播放
 		autoplay: {
 			delay: 3000,//延遲時間
 		},
@@ -187,6 +187,7 @@ $(function($) {
 		pagination: {
 			el: ".swiper-pagination",
 			clickable: true,
+			dynamicBullets: true,
 		},
 		navigation: {
 		nextEl: ".swiper-button-next",

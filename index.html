@@ -32,8 +32,8 @@
 		<!--header end-->
 
 		<div role="main" class="main">
-            
-      <!--index_banner start--><!--建議尺寸1920*700px-->
+
+      		<!--index_banner start--><!--建議尺寸1920*700px-->
 			<div class="index_banner">
 				<div class="swiper banner_01">
 					<div class="swiper-wrapper">
@@ -82,7 +82,7 @@
 						<div class="index_title text-center sr_top">輕鬆規劃旅行，<span class="d-md-none d-block"></span><span class="color_02">TaiPlay</span> 帶你飛向理想假期！</div>
 						<div class="search sr_bottom">
 							<input type="text" class="form-control">
-							<button class="btn_01"><i class="fa-solid fa-magnifying-glass"></i> 搜尋景點</button>
+							<button class="btn btn_01"><i class="fa-solid fa-magnifying-glass"></i> 搜尋景點</button>
 						</div>
 
 						<div class="list">
@@ -188,7 +188,7 @@
 					</div>
 					
 					<!-- <div class="btn_box text-center">
-						<a href="#" class="btn_01">MORE</a>
+						<a href="#" class="btn btn_01">MORE</a>
 					</div> -->
 					
 				</div>
@@ -198,155 +198,369 @@
 			<!--index_place start-->
 			<div class="index_place">
 				<div class="container">
-					<div class="index_title sr_top">熱門探索</div>
+					<div class="index_title sr_left">熱門探索</div>
 
-					<ul class="nav nav-pills sort-source" data-sort-id="portfolio" data-option-key="filter" data-plugin-options="{'layoutMode': 'fitRows', 'filter': '*', 'useHash': false}">
-						<li class="nav-item active" data-option-value="*"><a class="nav-link">All</a></li>
-						<li class="nav-item" data-option-value=".place"><a class="nav-link">景點</a></li>								
-						<li class="nav-item" data-option-value=".food"><a class="nav-link">美食</a></li>
-						<li class="nav-item" data-option-value=".shopping"><a class="nav-link">購物</a></li>
-					</ul>
+					<!--tab menu start-->
+					<nav>
+						<div class="nav nav-tabs" id="nav-tab" role="tablist">
+							<a class="nav-link hvr-overline-from-center sr_right active" id="tab_page_01" data-bs-toggle="tab" data-bs-target="#page_01" type="button" role="tab" aria-controls="page_01" aria-selected="true">景點</a>
+							<a class="nav-link hvr-overline-from-center sr_right" id="tab_page_02" data-bs-toggle="tab" data-bs-target="#page_02" type="button" role="tab" aria-controls="page_02" aria-selected="false">美食</a>
+							<a class="nav-link hvr-overline-from-center sr_right" id="tab_page_03" data-bs-toggle="tab" data-bs-target="#page_03" type="button" role="tab" aria-controls="page_03" aria-selected="false">購物</a>
+						</div>
+					</nav>
+					<!--tab menu end-->
 
-					<div class="index_title_s sr_top mb-3">
+					<div class="index_title_s mb-3 sr_bottom">
 						<b>跟上旅遊熱潮，探索更多精彩！</b><br>
 						跟上最新旅遊熱潮，探索熱門景點與特色玩法，發現近期值得一訪的旅行去處，為你的下一趟旅程找到更多靈感！
 					</div>
 
-					<div class="list portfolio-list sort-destination" data-sort-id="portfolio">
-						<div class="item sr_bottom isotope-item place">
-							<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
-							<a href="place_detail.html" title="國父紀念館">
-								<div class="box">
-									<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
-									<div class="font">
-										<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
-										<div class="title">國父紀念館</div>
+					<!--tab con start-->
+					<div class="tab-content" id="nav-tabContent">
+						<div class="tab-pane fade show active" id="page_01" role="tabpanel" aria-labelledby="tab_page_01">
+							<div class="swiper dot_bottom place_banner">
+								<div class="swiper-wrapper list">
+									
+									<div class="swiper-slide item">
+										<div class="favorite_box">
+											<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
+										</div>
+										<a href="place_detail.html" title="國父紀念館">
+											<div class="box">
+												<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
+												<div class="font">
+													<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
+													<div class="title">國父紀念館</div>
+												</div>
+											</div>
+										</a>
 									</div>
+
+									<div class="swiper-slide item">
+										<div class="favorite_box">
+											<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
+										</div>
+										<a href="place_detail.html" title="國父紀念館">
+											<div class="box">
+												<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
+												<div class="font">
+													<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
+													<div class="title">國父紀念館</div>
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<div class="swiper-slide item">
+										<div class="favorite_box">
+											<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
+										</div>
+										<a href="place_detail.html" title="國父紀念館">
+											<div class="box">
+												<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
+												<div class="font">
+													<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
+													<div class="title">國父紀念館</div>
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<div class="swiper-slide item">
+										<div class="favorite_box">
+											<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
+										</div>
+										<a href="place_detail.html" title="國父紀念館">
+											<div class="box">
+												<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
+												<div class="font">
+													<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
+													<div class="title">國父紀念館</div>
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<div class="swiper-slide item">
+										<div class="favorite_box">
+											<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
+										</div>
+										<a href="place_detail.html" title="國父紀念館">
+											<div class="box">
+												<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
+												<div class="font">
+													<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
+													<div class="title">國父紀念館</div>
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<div class="swiper-slide item">
+										<div class="favorite_box">
+											<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
+										</div>
+										<a href="place_detail.html" title="國父紀念館">
+											<div class="box">
+												<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
+												<div class="font">
+													<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
+													<div class="title">國父紀念館</div>
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<div class="swiper-slide item">
+										<div class="favorite_box">
+											<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
+										</div>
+										<a href="place_detail.html" title="國父紀念館">
+											<div class="box">
+												<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
+												<div class="font">
+													<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
+													<div class="title">國父紀念館</div>
+												</div>
+											</div>
+										</a>
+									</div>
+
 								</div>
-							</a>
+								<div class="swiper-pagination"></div>
+							</div>   
 						</div>
-						<div class="item sr_bottom isotope-item food">
-							<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
-							<a href="place_detail.html" title="鼎泰豐">
-								<div class="box">
-									<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
-									<div class="font">
-										<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
-										<div class="title">鼎泰豐</div>
+
+						<div class="tab-pane fade" id="page_02" role="tabpanel" aria-labelledby="tab_page_02">
+							<div class="swiper dot_bottom place_banner">
+								<div class="swiper-wrapper list">
+									
+									<div class="swiper-slide item">
+										<div class="favorite_box">
+											<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
+										</div>
+										<a href="place_detail.html" title="國父紀念館">
+											<div class="box">
+												<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
+												<div class="font">
+													<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
+													<div class="title">美食-國父紀念館</div>
+												</div>
+											</div>
+										</a>
 									</div>
+
+									<div class="swiper-slide item">
+										<div class="favorite_box">
+											<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
+										</div>
+										<a href="place_detail.html" title="國父紀念館">
+											<div class="box">
+												<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
+												<div class="font">
+													<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
+													<div class="title">美食-國父紀念館</div>
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<div class="swiper-slide item">
+										<div class="favorite_box">
+											<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
+										</div>
+										<a href="place_detail.html" title="國父紀念館">
+											<div class="box">
+												<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
+												<div class="font">
+													<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
+													<div class="title">美食-國父紀念館</div>
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<div class="swiper-slide item">
+										<div class="favorite_box">
+											<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
+										</div>
+										<a href="place_detail.html" title="國父紀念館">
+											<div class="box">
+												<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
+												<div class="font">
+													<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
+													<div class="title">美食-國父紀念館</div>
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<div class="swiper-slide item">
+										<div class="favorite_box">
+											<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
+										</div>
+										<a href="place_detail.html" title="國父紀念館">
+											<div class="box">
+												<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
+												<div class="font">
+													<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
+													<div class="title">美食-國父紀念館</div>
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<div class="swiper-slide item">
+										<div class="favorite_box">
+											<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
+										</div>
+										<a href="place_detail.html" title="國父紀念館">
+											<div class="box">
+												<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
+												<div class="font">
+													<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
+													<div class="title">美食-國父紀念館</div>
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<div class="swiper-slide item">
+										<div class="favorite_box">
+											<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
+										</div>
+										<a href="place_detail.html" title="國父紀念館">
+											<div class="box">
+												<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
+												<div class="font">
+													<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
+													<div class="title">美食-國父紀念館</div>
+												</div>
+											</div>
+										</a>
+									</div>
+
 								</div>
-							</a>
+								<div class="swiper-pagination"></div>
+							</div> 
 						</div>
-						<div class="item sr_bottom isotope-item shopping">
-							<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
-							<a href="place_detail.html" title="台北101">
-								<div class="box">
-									<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
-									<div class="font">
-										<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
-										<div class="title">台北101</div>
+
+						<div class="tab-pane fade" id="page_03" role="tabpanel" aria-labelledby="tab_page_03">
+							<div class="swiper dot_bottom place_banner">
+								<div class="swiper-wrapper list">
+									
+									<div class="swiper-slide item">
+										<div class="favorite_box">
+											<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
+										</div>
+										<a href="place_detail.html" title="國父紀念館">
+											<div class="box">
+												<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
+												<div class="font">
+													<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
+													<div class="title">購物-國父紀念館</div>
+												</div>
+											</div>
+										</a>
 									</div>
-								</div>
-							</a>
-						</div>
-						<div class="item sr_bottom isotope-item place">
-							<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
-							<a href="place_detail.html" title="中正紀念館">
-								<div class="box">
-									<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
-									<div class="font">
-										<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
-										<div class="title">中正紀念館</div>
+
+									<div class="swiper-slide item">
+										<div class="favorite_box">
+											<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
+										</div>
+										<a href="place_detail.html" title="國父紀念館">
+											<div class="box">
+												<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
+												<div class="font">
+													<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
+													<div class="title">購物-國父紀念館</div>
+												</div>
+											</div>
+										</a>
 									</div>
-								</div>
-							</a>
-						</div>
-						<div class="item sr_bottom isotope-item place">
-							<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
-							<a href="place_detail.html" title="國父紀念館">
-								<div class="box">
-									<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
-									<div class="font">
-										<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
-										<div class="title">國父紀念館</div>
+
+									<div class="swiper-slide item">
+										<div class="favorite_box">
+											<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
+										</div>
+										<a href="place_detail.html" title="國父紀念館">
+											<div class="box">
+												<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
+												<div class="font">
+													<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
+													<div class="title">購物-國父紀念館</div>
+												</div>
+											</div>
+										</a>
 									</div>
-								</div>
-							</a>
-						</div>
-						<div class="item sr_bottom isotope-item food">
-							<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
-							<a href="place_detail.html" title="鼎泰豐">
-								<div class="box">
-									<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
-									<div class="font">
-										<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
-										<div class="title">鼎泰豐</div>
+
+									<div class="swiper-slide item">
+										<div class="favorite_box">
+											<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
+										</div>
+										<a href="place_detail.html" title="國父紀念館">
+											<div class="box">
+												<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
+												<div class="font">
+													<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
+													<div class="title">購物-國父紀念館</div>
+												</div>
+											</div>
+										</a>
 									</div>
-								</div>
-							</a>
-						</div>
-						<div class="item sr_bottom isotope-item shopping">
-							<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
-							<a href="place_detail.html" title="台北101">
-								<div class="box">
-									<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
-									<div class="font">
-										<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
-										<div class="title">台北101</div>
+
+									<div class="swiper-slide item">
+										<div class="favorite_box">
+											<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
+										</div>
+										<a href="place_detail.html" title="國父紀念館">
+											<div class="box">
+												<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
+												<div class="font">
+													<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
+													<div class="title">購物-國父紀念館</div>
+												</div>
+											</div>
+										</a>
 									</div>
-								</div>
-							</a>
-						</div>
-						<div class="item sr_bottom isotope-item place">
-							<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
-							<a href="place_detail.html" title="中正紀念館">
-								<div class="box">
-									<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
-									<div class="font">
-										<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
-										<div class="title">中正紀念館</div>
+
+									<div class="swiper-slide item">
+										<div class="favorite_box">
+											<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
+										</div>
+										<a href="place_detail.html" title="國父紀念館">
+											<div class="box">
+												<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
+												<div class="font">
+													<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
+													<div class="title">購物-國父紀念館</div>
+												</div>
+											</div>
+										</a>
 									</div>
-								</div>
-							</a>
-						</div>
-						<div class="item sr_bottom isotope-item food">
-							<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
-							<a href="place_detail.html" title="鼎泰豐">
-								<div class="box">
-									<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
-									<div class="font">
-										<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
-										<div class="title">鼎泰豐</div>
+
+									<div class="swiper-slide item">
+										<div class="favorite_box">
+											<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
+										</div>
+										<a href="place_detail.html" title="國父紀念館">
+											<div class="box">
+												<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
+												<div class="font">
+													<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
+													<div class="title">購物-國父紀念館</div>
+												</div>
+											</div>
+										</a>
 									</div>
+
 								</div>
-							</a>
-						</div>
-						<div class="item sr_bottom isotope-item shopping">
-							<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
-							<a href="place_detail.html" title="台北101">
-								<div class="box">
-									<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
-									<div class="font">
-										<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
-										<div class="title">台北101</div>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="item sr_bottom isotope-item place">
-							<button class="favorite_icon" title="加入收藏"><i class="fa-regular fa-heart"></i></button>
-							<a href="place_detail.html" title="中正紀念館">
-								<div class="box">
-									<img src="/img/200x330.png" alt="" style="background-image: url(img/pic_01.jpg); background-position: top center; background-size: cover;">
-									<div class="font">
-										<div class="city"><i class="fa-solid fa-location-dot"></i> 台北</div>
-										<div class="title">中正紀念館</div>
-									</div>
-								</div>
-							</a>
+								<div class="swiper-pagination"></div>
+							</div> 
+
 						</div>
 					</div>
-					
+					<!--tab con end-->
 				</div>
 			</div>
 			<!--index_place end-->
@@ -377,6 +591,72 @@
 		<!-- Swiper end -->
 
 		<script src="js/jquery.isotope.min.js"></script>
-		
+
+		<!-- Modal start-->
+		<!--加入收藏-->
+		<div class="modal fade" id="favoriteModal" tabindex="-1" aria-labelledby="favoriteModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="favoriteModalLabel">加入收藏</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<button class="btn btn_add float-end" data-bs-toggle="modal" data-bs-target="#add_modal">新增</button>
+					<div class="favorite_type">
+						<div class="item active">
+							<div class="icon">
+								<div class="icon_bg">
+									<img src="img/customer/icon_07.svg">
+								</div>
+							</div>
+							<div class="font">
+								<div class="title">口袋清單</div>
+								<div class="quantity">2 個景點</div>
+							</div>
+							<input type="checkbox" checked>
+						</div>
+						<div class="item">
+							<div class="icon">
+								<div class="icon_bg">
+									<img src="img/customer/icon_07.svg">
+								</div>
+							</div>
+							<div class="font">
+								<div class="title">口袋清單</div>
+								<div class="quantity">2 個景點</div>
+							</div>
+							<input type="checkbox">
+						</div>
+					</div>
+					
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-cancel" data-bs-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary" id="confirmFavoriteBtn">確認送出</button>
+				</div>
+				</div>
+			</div>
+		</div>
+
+		<!--新增收藏資料夾-->
+		<div class="modal fade" id="add_modal" tabindex="-1" aria-labelledby="add_label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title">新增收藏資料夾</div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-cancel" data-bs-toggle="modal" data-bs-target="#favoriteModal">取消</button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#favoriteModal">確認</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal end-->
 	</body>
 </html>
