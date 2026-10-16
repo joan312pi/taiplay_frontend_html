@@ -1029,7 +1029,7 @@ img::-moz-selection {
 	float:left;
 	width: 100%;
 	background: #fff/*$d-bg-04*/;
-	padding: 100px 0;
+	padding: 100px 0 80px 0;
 	.container{
 		position: relative;
 		&::before{
@@ -1192,6 +1192,7 @@ img::-moz-selection {
 	}
 }
 
+
 /*form*/
 input:checked{
     accent-color: $d-color-01-d;
@@ -1200,6 +1201,33 @@ input[type=radio] ,input[type=checkbox]{
 	width: 30px;
 	height: 30px;
 	border-color: $d-border-color;
+}
+
+
+/*index_trip*/
+.index_trip{
+	float: left;
+	width: 100%;
+	background: $d-bg-01;
+	padding: 100px 5%;
+	.container{
+		position: relative;
+		&:after{
+			content: "";
+			background-image: url(/img/customer/index_04.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 657px;
+			height: 651px;
+			position: absolute;
+			right:-150px;
+			top:-300px;
+		}
+		.index_title{
+			border:none;
+			margin-bottom: 0;
+		}
+	}
 }
 
 
@@ -2128,6 +2156,19 @@ header{
 }
 
 
+/*index_trip*/
+.index_trip{
+	.container{
+		&:after{
+			width: 400px;
+			height: 400px;
+			right:-150px;
+			top:-250px;
+		}
+	}
+}
+
+
 /*main*/
 .menu_left .sidebar_menu ,.menu_right .sidebar_menu{
 	width: 260px;
@@ -2263,6 +2304,20 @@ h4,.title_01{
 	}
 }
 
+
+/*index_trip*/
+.index_trip{
+	.container{
+		&:after{
+			width: 550px;
+			height: 550px;
+			right:-150px;
+			top:-250px;
+		}
+	}
+}
+
+
 /*main*/
 .menu_left .sidebar_menu ,.menu_right .sidebar_menu{
 	width: 300px;
@@ -2367,6 +2422,18 @@ html:not(.sticky-header-active){
 	margin-top: 0;
 }
 
+
+/*index_trip*/
+.index_trip{
+	.container{
+		&:after{
+			width: 657px;
+			height: 651px;
+			right:-50px;
+			top:-300px;
+		}
+	}
+}
 
 
 /*page_banner*/
@@ -2641,6 +2708,21 @@ h5{
 	}
 }
 
+
+/*index_trip*/
+.index_trip{
+	overflow-y: visible;
+	.container{
+		&:after{
+			width: 300px;
+			height: 300px;
+			right:-50px;
+			top:-200px;
+		}
+	}
+}
+
+
 /*footer*/
 #footer {
 	font-size: 0.8em;
@@ -2773,6 +2855,20 @@ h5{
 	.list{
 		.item{
 			width: 100%;
+		}
+	}
+}
+
+
+/*index_trip*/
+.index_trip{
+	padding: 50px 5%;
+	.container{
+		&:after{
+			width: 200px;
+			height: 200px;
+			right:  -40px;
+			top:-150px;
 		}
 	}
 }

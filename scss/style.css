@@ -881,7 +881,7 @@ img::-moz-selection {
   float: left;
   width: 100%;
   background: #fff;
-  padding: 100px 0;
+  padding: 100px 0 80px 0;
 }
 .index_place .container {
   position: relative;
@@ -1047,6 +1047,32 @@ input[type=radio], input[type=checkbox] {
   width: 30px;
   height: 30px;
   border-color: #E2E8F0;
+}
+
+/*index_trip*/
+.index_trip {
+  float: left;
+  width: 100%;
+  background: #EDF2F7;
+  padding: 100px 5%;
+}
+.index_trip .container {
+  position: relative;
+}
+.index_trip .container:after {
+  content: "";
+  background-image: url(/img/customer/index_04.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 657px;
+  height: 651px;
+  position: absolute;
+  right: -150px;
+  top: -300px;
+}
+.index_trip .container .index_title {
+  border: none;
+  margin-bottom: 0;
 }
 
 /*footer*/
@@ -1883,6 +1909,13 @@ a:hover .imh_down img {
   .index_place .nav {
     left: 155px;
   }
+  /*index_trip*/
+  .index_trip .container:after {
+    width: 400px;
+    height: 400px;
+    right: -150px;
+    top: -250px;
+  }
   /*main*/
   .menu_left .sidebar_menu, .menu_right .sidebar_menu {
     width: 260px;
@@ -1978,6 +2011,13 @@ a:hover .imh_down img {
   .index_place .nav {
     left: 180px;
   }
+  /*index_trip*/
+  .index_trip .container:after {
+    width: 550px;
+    height: 550px;
+    right: -150px;
+    top: -250px;
+  }
   /*main*/
   .menu_left .sidebar_menu, .menu_right .sidebar_menu {
     width: 300px;
@@ -2042,6 +2082,13 @@ a:hover .imh_down img {
   /*index_banner*/
   .index_banner {
     margin-top: 0;
+  }
+  /*index_trip*/
+  .index_trip .container:after {
+    width: 657px;
+    height: 651px;
+    right: -50px;
+    top: -300px;
   }
   /*page_banner*/
   .page_banner {
@@ -2264,6 +2311,16 @@ a:hover .imh_down img {
   .index_place .list .title {
     font-size: 1.1em !important;
   }
+  /*index_trip*/
+  .index_trip {
+    overflow-y: visible;
+  }
+  .index_trip .container:after {
+    width: 300px;
+    height: 300px;
+    right: -50px;
+    top: -200px;
+  }
   /*footer*/
   #footer {
     font-size: 0.8em;
@@ -2367,5 +2424,15 @@ a:hover .imh_down img {
   /*index_news*/
   .index_news .list .item {
     width: 100%;
+  }
+  /*index_trip*/
+  .index_trip {
+    padding: 50px 5%;
+  }
+  .index_trip .container:after {
+    width: 200px;
+    height: 200px;
+    right: -40px;
+    top: -150px;
   }
 }/*# sourceMappingURL=style.css.map */
