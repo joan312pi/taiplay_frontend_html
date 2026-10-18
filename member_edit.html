@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="zh-hant-tw" xml:lang="zh-hant-tw">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>TaiPlay旅遊行程規劃平台</title>
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+		<meta http-equiv="Cache-Control" content="private,no-cache">	
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="email=no">
+		<meta name="format-detection" content="adress=no">
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/theme.css">
+		<link rel="stylesheet" href="css/theme-elements.css">
+		<link rel="stylesheet" href="scss/style.css">
+		
+		<!--font icon-->
+		<link rel="stylesheet" href="css/all.min.css">
+		<link rel="stylesheet" href="css/fontawesome.min.css">
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/main.js"></script>	
+
+	</head>
+	<body>
+		
+		<!--header start-->
+		<script>$.include("blocks/header.html");</script>
+		<!--header end-->
+
+		<div role="main" class="main">
+
+			<!--page_banner start--><!--建議尺寸1920*300px-->
+			<div class="page_banner">
+				<h2 class="sr_top">基本資料</h2>
+			</div>
+			<!--page_banner end-->
+
+			<!--breadcrumb end-->
+			<div class="breadcrumb_box">
+				<nav aria-label="breadcrumb" class="container">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+						<li class="breadcrumb-item">會員管理</li>
+						<li class="breadcrumb-item active">基本資料</li>
+					</ol>
+				</nav>
+			</div>
+			<!--breadcrumb end-->
+
+			<!--main_con start-->
+			<div class="main_con">
+				<div class="container margin_auto">
+					
+					<div class="member_box">
+						<div class="menu">
+
+							<div class="user_box">
+								<div class="img">
+									<img src="/img/300x300.png"  alt="" style="background-image: url(/img/customer/member_pic.jpg); background-position: top center; background-size: cover;">
+								</div>
+								<div class="title">王小明</div>
+								<div class="mail">test@serive.com</div>
+							</div>
+
+							<div class="user_total">
+								<div class="item">
+									<div class="quantity">12</div>
+									<div class="title">收藏景點</div>
+								</div>
+								<div class="item">
+									<div class="quantity">2</div>
+									<div class="title">規劃行程</div>
+								</div>
+							</div>
+
+							<hr>
+
+							<aside>
+								<a href="member_edit.htm" class="active">基本資料</a>
+								<a href="member_favorite.html">收藏清單</a>
+								<a href="member_trip.html">行程管理</a>
+								<a href="member_password.html">密碼變更</a>
+								<hr>
+								<a href="login.html" class="logout">登出</a>
+							</aside>
+
+						</div>
+						<div class="con">
+							<form>
+								<div class="row">
+									<div class="mb-3 col-12 col-md-6">
+										<label for="username" class="form-label required">姓名</label>
+										<input type="text" class="form-control" id="username" placeholder="請輸入姓名">
+										<!-- <div id="usernameHelp" class="finvalid-feedback">請輸入姓名</div> -->
+									</div>
+
+									<div class="mb-3 col-12 col-md-6">
+										<label for="email" class="form-label required">電子信箱</label>
+										<input type="email" class="form-control" id="email" placeholder="請輸入電子信箱">
+										<!-- <div id="emailHelp" class="finvalid-feedback">請輸入電子信箱</div> -->
+									</div>
+									
+									<div class="mb-3 col-12 col-md-6">
+										<label for="phone" class="form-label">手機號碼</label>
+										<input type="text" class="form-control" id="phone" placeholder="請輸入手機號碼">
+									</div>
+
+									<div class="mb-3 col-12 col-md-6">
+										<label for="gender" class="form-label">姓別</label><br>
+										<label class="form-check-label">
+											<input type="radio" name="gender" value="1" checked>男
+										</label>
+										<label class="form-check-label">
+											<input type="radio" name="gender" value="2">女
+										</label>
+										<label class="form-check-label">
+											<input type="radio" name="gender" value="3">不透露
+										</label>
+									</div>
+
+									<div class="mb-3 col-12 col-md-6">
+										<label for="birthday" class="form-label">生日</label>
+										<input type="date" class="form-control" id="birthday">
+									</div>
+									
+									<div class="mb-3 col-12 col-md-4">
+										<label for="educational" class="form-label">學歷</label>
+										<select class="w-auto form-select" id="educational">
+											<option value="" disabled selected hidden>請選擇</option>
+											<option value="1" selected>國小</option>
+											<option value="2">國中</option>
+											<option value="3">高中/高職</option>
+											<option value="4">專科</option>
+											<option value="5">大學</option>
+											<option value="6">碩士</option>
+											<option value="7">博士</option>
+											<option value="8">其他</option>
+										</select>
+									</div>
+
+									<div class="mb-3 col-6 col-md-3">
+										<label for="gender" class="form-label">居住縣市</label>
+										<select class="form-select" id="gender">
+											<option value="" disabled selected hidden>請選擇</option>
+											<option value="1" selected>臺北市</option>
+											<option value="2">新北市</option>
+											<option value="3">桃園市</option>
+											<option value="4">臺中市</option>
+											<option value="5">臺南市</option>
+											<option value="6">高雄市</option>
+											<option value="7">基隆市</option>
+											<option value="8">新竹市</option>
+										</select>
+									</div>
+
+									<div class="mb-3 col-12 col-md-9">
+										<label for="phone" class="form-label">地址</label>
+										<input type="text" class="form-control" id="phone" placeholder="請輸入地址">
+									</div>
+
+									<div class="mb-3 col-12">
+										<label for="phone" class="form-label">代表圖</label>
+										<input type="file" class="form-control" id="phone" placeholder="請輸入手機號碼">
+										<div class="finvalid-feedback">建議尺寸 200*200 px</div>
+									</div>
+
+									<div class="verification_code mb-3 col-12">
+										<label for="verification" class="form-label">驗證碼</label><br>
+										<input type="text" id="verification" placeholder="請輸入驗證碼" class="form-control d-inline" />
+										<img id="CaptchaImage" src="img/Pic_Check01.gif" alt="驗證碼" style="height: 36px !important;vertical-align: top;">
+										<a href="#" class="code_btn d-inline-block p-2" title="驗證碼重新整理">
+											<i class="fa fa-refresh" aria-hidden="true"></i>
+											<span class="sr-only">驗證碼重新整理</span>
+										</a>
+										<!-- <div id="verificationHelp" class="finvalid-feedback">請輸入驗證碼</div> -->
+									</div>
+								</div>
+
+								<div class="btn_box text-center">
+									<button type="button" class="btn btn_01" data-bs-toggle="modal" data-bs-target="#ok_modal">儲存</button>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--main_con end-->
+
+		</div>
+		
+		<!--footer start-->
+		<script>$.include("blocks/footer.html");</script>
+		<!--footer end-->
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.appear.min.js"></script>
+		<script src="js/jquery.easing.min.js"></script>
+		<script src="js/jquery.visible.min.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		
+		<script src="js/theme.js"></script>
+		<script src="js/theme.init.js"></script>
+
+		<!--滾動效果 start-->
+		<script src="js/scrollreveal.min.js"></script>
+		<!--滾動效果 end-->
+
+		<!-- Modal start-->
+		<div class="modal fade" id="ok_modal" tabindex="-1" aria-labelledby="ok_label" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title" id="edit_label">修改資料</div>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						已修改儲存完成。
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-bs-dismiss="modal">確認</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal end-->
+		
+	</body>
+</html>

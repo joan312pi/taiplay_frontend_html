@@ -65,19 +65,6 @@ $(document).ready(function(){
 });
 //#endregion
 
-//#region fat footer收合
-$(document).ready(function(){
-	$(".toggle_icon").click(function(){
-		var collapsed=$(this).find('i').hasClass('fa-chevron-up');
-		// $(".toggle_menu").slideToggle();	
-		$('.toggle_icon').find('i').removeClass('fa-chevron-down');
-		$('.toggle_icon').find('i').addClass('fa-chevron-up');
-		if(collapsed)
-			$(this).find('i').toggleClass('fa-chevron-up fa-chevron-down')
-	});
-});
-//#endregion
-
 
 //#region cookie
 function ccc() {
@@ -187,3 +174,20 @@ $(document).on('change', '.favorite_type input[type="checkbox"]', function() {
 });
 //#endregion
 
+//#region顯示密碼
+$(document).ready(function() {
+	$(".password_eye").on('click', function(event) {
+		event.preventDefault();
+		var that = $(this);
+		if(that.parent().find('input').attr("type") == "text"){
+			that.parent().find('input').attr('type', 'password');
+			that.parent().find('i').addClass( "fa-eye-slash" );
+			that.parent().find('i').removeClass( "fa-eye" );
+		}else if(that.parent().find('input').attr("type") == "password"){
+			that.parent().find('input').attr('type', 'text');
+			that.parent().find('i').removeClass( "fa-eye-slash" );
+			that.parent().find('i').addClass( "fa-eye" );
+		}
+	});
+});
+//#endregion

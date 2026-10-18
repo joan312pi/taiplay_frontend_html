@@ -33,29 +33,87 @@
 
 		<div role="main" class="main">
 
-      <!--page_banner start--><!--建議尺寸1920*200px-->
+			<!--page_banner start--><!--建議尺寸1920*300px-->
 			<div class="page_banner">
-				<img src="img/customer/index_banner.jpg">
+				<h2 class="sr_top">會員登入</h2>
 			</div>
 			<!--page_banner end-->
 
 			<!--breadcrumb end-->
 			<div class="breadcrumb_box">
-				<nav aria-label="breadcrumb">
+				<nav aria-label="breadcrumb" class="container">
 					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Library</li>
+						<li class="breadcrumb-item"><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+						<li class="breadcrumb-item active">會員登入</li>
 					</ol>
 				</nav>
 			</div>
 			<!--breadcrumb end-->
-			
+
+			<!--main_con start-->
+			<div class="main_con">
+				<div class="container margin_auto">
+					
+					<div class="login_box">
+						<div class="font mb-5">
+							歡迎來到 TaiPlay！您的專屬旅遊行程規劃夥伴。<br><br>
+							輕鬆搜尋熱門景點、彈性安排完美路線，一鍵打造獨一無二的精彩旅程。立即登入會員，隨時同步您的私房行程與收藏，讓每一次出發都充滿驚喜與期待！
+						</div>
+						<form>
+							<div class="mb-3">
+								<label for="email" class="form-label">電子信箱</label>
+								<div class="input-group">
+									<span class="input-group-text">
+										<img src="/img/customer/mail_01.svg">
+									</span>
+									<input type="email" class="form-control" id="email" placeholder="請輸入電子信箱">
+								</div>
+								<!-- <div id="emailHelp" class="finvalid-feedback">請輸入電子信箱</div> -->
+							</div>
+							<div class="mb-3">
+								<label for="password" class="form-label">密碼</label>
+								<div class="input-group show_hide_password">
+									<span class="input-group-text">
+										<img src="/img/customer/password.svg">
+									</span>
+									<input type="password" class="form-control" id="password" placeholder="至少 8 位英數組合">
+									<i class="fa-regular fa-eye-slash password_eye" aria-hidden="true"></i>
+								</div>
+								<!-- <div id="passwordHelp" class="finvalid-feedback">至少 8 位英數組合</div> -->
+							</div>
+
+							<div class="verification_code mb-3">
+								<label for="verification" class="form-label">驗證碼</label><br>
+								<input type="text" id="verification" placeholder="請輸入驗證碼" class="form-control d-inline" />
+								<img id="CaptchaImage" src="img/Pic_Check01.gif" alt="驗證碼" style="height: 36px !important;vertical-align: top;">
+								<a href="#" class="code_btn d-inline-block p-2" title="驗證碼重新整理">
+									<i class="fa fa-refresh" aria-hidden="true"></i>
+									<span class="sr-only">驗證碼重新整理</span>
+								</a>
+								<!-- <div id="verificationHelp" class="finvalid-feedback">請輸入驗證碼</div> -->
+							</div>
+
+							<div class="mb-1">
+								<a href="#" class="link-primary" data-bs-toggle="modal" data-bs-target="#edit_modal">忘記密碼 ?</a>
+							</div>
+
+							<div class="btn_box text-center login_btn_box">
+								<a href="member_register.html" class="btn btn-secondary">註冊</a>
+								<button type="submit" class="btn btn_01" onclick="location.href='member_edit.html'">登入</button>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+			<!--main_con end-->
 
 		</div>
 		
 		<!--footer start-->
 		<script>$.include("blocks/footer.html");</script>
 		<!--footer end-->
+
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.appear.min.js"></script>
 		<script src="js/jquery.easing.min.js"></script>
@@ -69,79 +127,37 @@
 		<script src="js/scrollreveal.min.js"></script>
 		<!--滾動效果 end-->
 
-		<!-- Swiper start -->
-		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
-		<script src="js/swiper-bundle.min.js"></script>
-		<script src="js/main_swiper.js"></script>
-		<!-- Swiper end -->
-
-		<script src="js/jquery.isotope.min.js"></script>
-
 		<!-- Modal start-->
-		<!--加入收藏-->
-		<div class="modal fade" id="favoriteModal" tabindex="-1" aria-labelledby="favoriteModalLabel" aria-hidden="true">
+		<div class="modal fade" id="edit_modal" tabindex="-1" aria-labelledby="edit_label" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="favoriteModalLabel">加入收藏</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<button class="btn btn_add float-end" data-bs-toggle="modal" data-bs-target="#add_modal">新增</button>
-					<div class="favorite_type">
-						<div class="item active">
-							<div class="icon">
-								<div class="icon_bg">
-									<img src="img/customer/icon_07.svg">
-								</div>
-							</div>
-							<div class="font">
-								<div class="title">口袋清單</div>
-								<div class="quantity">2 個景點</div>
-							</div>
-							<input type="checkbox" checked>
-						</div>
-						<div class="item">
-							<div class="icon">
-								<div class="icon_bg">
-									<img src="img/customer/icon_07.svg">
-								</div>
-							</div>
-							<div class="font">
-								<div class="title">口袋清單</div>
-								<div class="quantity">2 個景點</div>
-							</div>
-							<input type="checkbox">
+					<div class="modal-header">
+						<div class="modal-title" id="edit_label">忘記密碼</div>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li>請輸入您原先設定的電子郵件信箱,我們會寄一封密碼通知函給您。</li>
+							<li>若原先設定電子郵件信箱有誤,可能導致無法收到密碼通知函,若發生此狀況, 請聯絡客服。</li>
+						</ol>
+						<input type="text" class="form-control" placeholder="請輸入註冊Email">
+						<div class="verification_code mt-1">
+							<input type="text" placeholder="請輸入驗證碼" class="form-control input-small d-inline" />
+							<img id="CaptchaImage" src="img/Pic_Check01.gif" alt="驗證碼" style="height: 36px !important;vertical-align: top;">
+							<a href="#" class="code_btn p-2" title="驗證碼重新整理">
+								<i class="fa fa-refresh" aria-hidden="true"></i>
+								<span class="sr-only">驗證碼重新整理</span>
+							</a>
 						</div>
 					</div>
-					
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-cancel" data-bs-dismiss="modal">取消</button>
-					<button type="button" class="btn btn-primary" id="confirmFavoriteBtn">確認送出</button>
-				</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary" data-bs-dismiss="modal">確認</button>
+					</div>
 				</div>
 			</div>
 		</div>
-
-		<!--新增收藏資料夾-->
-		<div class="modal fade" id="add_modal" tabindex="-1" aria-labelledby="add_label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div class="modal-title">新增收藏資料夾</div>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-cancel" data-bs-toggle="modal" data-bs-target="#favoriteModal">取消</button>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#favoriteModal">確認</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal end-->
+		<!-- Modal end-->
+		
 	</body>
 </html>
