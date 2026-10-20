@@ -2282,14 +2282,18 @@ label[for=page_select] select{
 .user_list{
 	float: left;
 	width: 100%;
-	margin-top: 30px;
+	margin-top: 40px;
 	.item{
 		float: left;
 		width: 100%;
 		padding: 10px 0 10px 10px;
-		border-bottom: solid 1px $d-border-color;
+		// border-bottom: dotted 1px $d-border-color;
+		background:$d-gray_01 ;
+		border-radius: 10px;
+		margin-bottom: 10px;
 		&:last-child{
 			border:none;
+			margin-bottom: 0;
 		}
 		.img{
 			float: left;
@@ -2302,14 +2306,15 @@ label[for=page_select] select{
 		.font{
 			float: left;
 			width: calc(100% - 90px);
-			padding: 15px 0 0 15px;
+			padding: 10px 0 0 15px;
 			.title{
 				font-size: 1.2em;
 				font-weight: bold;
 				.tag{
-					background: $d-bg-01;
+					background: $d-color-02;
+					color:#fff;
 					border-radius: 30px;
-					padding: 3px 10px;
+					padding: 1px 10px 3px 10px;
 					font-size: 0.8em;
 					margin-left: 10px;
 				}
@@ -2318,7 +2323,7 @@ label[for=page_select] select{
 		.edit{
 			float: left;
 			width: 40px;
-			padding-top: 15px;
+			padding-top: 8px;
 			.btn{
 				padding: 5px 10px !important;
 			}
@@ -2426,6 +2431,33 @@ label[for=page_select] select{
 			color:#333;
 			text-align: right;
 		}
+	}
+}
+
+
+/*memberTripList*/
+#memberTripList{
+	float: left;
+	width: 100%;
+	list-style: none;
+	padding-left: 0px;
+	li{
+		float: left;
+		width: 100%;
+		background: #fff;
+		border-radius: 20px;
+		@include border;
+		@include box-shadow;
+		padding: 20px;
+		margin: 10px 0;
+	}
+	.sort{
+		float:left;
+		width: 50px;
+	}
+	.img{
+		float:left;
+		width: 200px;
 	}
 }
 

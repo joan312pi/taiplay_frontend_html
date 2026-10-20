@@ -174,13 +174,25 @@
 
 								<!--第一天 start-->
 								<div class="tab-pane fade" id="page_02" role="tabpanel" aria-labelledby="tab_page_02">
-										222
+									<div class="date">2026/10/06</div>
+									<ul id="memberTripList">
+										<li data-id="1">
+											<div class="sort">01</div>
+											<div class="img">
+												<img src="img/600x300.png" alt="" style="background-image: url(img/logo_400x300.jpg); background-position: center center; background-size: cover;">
+											</div>
+										</li>
+										<li data-id="2">📌 第二項：介面 UI 設計</li>
+										<li data-id="3">📌 第三項：前端功能開發</li>
+										<li data-id="4">📌 第四項：後端 API 串接</li>
+										<li data-id="5">📌 第五項：上線與測試</li>
+									</ul>
 								</div>
 								<!--第一天 end-->
 
 								<!--第二天 start-->
 								<div class="tab-pane fade" id="page_03" role="tabpanel" aria-labelledby="tab_page_03">
-										333
+									<div class="date">2026/10/07</div>
 								</div>
 								<!--第二天 end-->
 							</div>
@@ -508,6 +520,33 @@
 			});
 			
 		</script>
+
+ 		<!--選單拖曳效果 start-->
+    <!-- 引入 Sortable.js CDN -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js"></script>
+		<script>
+			// 取得清單 DOM 元素
+			const el = document.getElementById('memberTripList');
+
+			// 初始化 Sortable
+			const sortable = Sortable.create(el, {
+				animation: 150, // 拖曳移動時的動畫毫秒數（讓動作更平順）
+				ghostClass: 'sortable-ghost', // 拖曳時產生的半透明留空樣式類別
+				
+				// 當拖曳結束且順序改變時觸發的事件
+				onEnd: function (evt) {
+					console.log('排序已更新！');
+					console.log('舊索引：', evt.oldIndex);
+					console.log('新索引：', evt.newIndex);
+
+					// 如果需要取得更新後的全部資料順序（例如傳給後端儲存）
+					const updatedOrder = sortable.toArray();
+					console.log('目前最新的 data-id 順序：', updatedOrder);
+				}
+			});
+		</script>
+    <!--選單拖曳效果 end-->
+
 		
 	</body>
 </html>
