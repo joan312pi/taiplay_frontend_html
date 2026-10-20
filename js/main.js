@@ -191,3 +191,21 @@ $(document).ready(function() {
 	});
 });
 //#endregion
+
+
+//#region 單選切換顯示內容
+function toggleChoice(inputName) {
+	var array = $('input[name="' + inputName + '"]');
+
+	for (var i = 0; i < array.length; i++) {
+
+		$("." + $(array[i]).attr("data-toggle")).hide();
+	}
+	var datatoggle = $('input[name="' + inputName + '"]:checked').attr("data-toggle");
+	switch ($('input[name="' + inputName + '"]:checked').attr("data-toggle")) {
+		case datatoggle:
+			$('.' + datatoggle).show();
+			break;
+	}
+}
+//#endregion
