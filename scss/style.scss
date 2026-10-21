@@ -703,6 +703,9 @@ img::-moz-selection {
 		right: 20px !important;
 		top: 15px !important;
 	}
+	.form-check-label{
+		margin:0px 15px 10px 0;
+	}
 }
 
 
@@ -1412,7 +1415,7 @@ input[type=radio] ,input[type=checkbox]{
 	&:has(select){
 		padding-top: 0px;
 		input[type=radio]{
-			margin-top: 11px;
+			margin-top: 0;
 		}
 	}
 }
@@ -2187,6 +2190,33 @@ label[for=page_select] select{
 }
 
 
+/*place_edit_info*/
+.place_edit_info{
+	float: left;
+	width: 100%;
+	background: $d-bg-01;
+	border-radius: 10px;
+	padding: 20px 20px 10px 20px;
+	margin-bottom: 20px;
+	.title{
+		font-size: 1.4em;
+		font-weight: bold;
+		color:#333;
+	}
+	.addr{
+		font-size: 0.9em;
+		color:$d-gray_03;
+		&:before{
+			content: "\f3c5";
+			font-weight: 900;
+			font-family: "Font Awesome 6 Free";
+			display: inline-block;
+			padding-right: 5px;
+		}
+	}
+}
+
+
 /*place_other*/
 .place_other{
 	float: left;
@@ -2256,16 +2286,70 @@ label[for=page_select] select{
 		}
 	}
 }
+.trip_day_list{
+	float:left;
+	width: 100%;
+	.item{
+		float: left;
+		width: 100%;
+		background: $d-gray_01;
+		border-radius: 10px;
+		padding: 10px 20px;
+		margin: 5px 0;
+		border:solid 1px transparent;
+		&.active{
+			border:solid 1px $d-color-01;
+		}
+		.title{
+			font-size: 1.2em;
+			font-weight: bold;
+		}
+		.font{
+			color:$d-gray_03;
+			font-size: 0.9em;
+		}
+	}
+}
+.trip_add_list{
+	float: left;
+	width: 100%;
+	.item{
+		float: left;
+		width: 100%;
+		margin-top: 10px;
+		@include border;
+		padding: 10px 20px;
+	}
+	.trip_info{
+		float: left;
+		width: 100%;
+		.title{
+			font-size: 1.2em;
+			font-weight: bold;
+			color:#333;
+		}
+		.con_font{
+			font-size: 0.9em;
+			color:$d-gray_02;
+		}
+	}
+}
 
 
 /*user*/
 .users{
 	margin-top: 5px;
+	label{
+		margin: 2px 0 2px 0 !important;
+	}
+	input[type="radio"] {
+		display: none;
+	}
 	img{
 		width: 30px !important;
 		height: 30px;
 		border-radius: 50%;
-		margin: 0 4px 0 0;
+		// margin: 2px 4px 2px 0;
 	}
 	&.change{
 		img{
@@ -2275,8 +2359,11 @@ label[for=page_select] select{
 	}
 }
 .change{
-	img.active{
-		border:solid 2px $d-color-01;
+	label{
+		&.active{
+			border:solid 3px $d-color-01;
+			border-radius: 50%;
+		}
 	}
 }
 .user_list{
@@ -2435,13 +2522,57 @@ label[for=page_select] select{
 }
 
 
+/*expense_type*/
+.expense_type{
+	input[type="radio"] {
+    display: none;
+	}
+	label{
+		background: $d-gray_01;
+		border-radius: 30px;
+		padding: 2px 10px 5px 10px;
+		margin: 2px 5px 2px 0px !important;
+		&.active{
+			// border: solid 3px $d-color-01;
+			background: $d-color-01;
+			color:#fff;
+			.svg-img{
+				path{
+					fill: #fff;
+				}
+			}
+		}
+		.title{
+			display: none;
+		}
+	}
+	.svg-img{
+		height: 25px;
+		width: 25px;
+		vertical-align: text-top;
+	}
+}
+
+
+/*expense_box*/
+.expense_box{
+	float: left;
+	width: 100%;
+	position: relative;
+	.top_btn_box {
+    right: 0px !important;
+    top: 0px !important;
+	}
+}
+
+
 /*memberTripList*/
-#memberTripList{
+.memberTripList{
 	float: left;
 	width: 100%;
 	list-style: none;
 	padding-left: 0px;
-	li{
+	>li{
 		float: left;
 		width: 100%;
 		background: #fff;
@@ -2449,15 +2580,190 @@ label[for=page_select] select{
 		@include border;
 		@include box-shadow;
 		padding: 20px;
-		margin: 10px 0;
+		margin: 10px 0 40px 0;
+		position: relative;
+		&::before{
+			content: ".............";
+			position: absolute;
+			left: 27px;
+			bottom: -30px;
+			display: block;
+			width: 2px;
+			height: 60px;
+			color:$d-gray_02;
+			transform: rotate(90deg);
+			font-size: 1.1em;
+		}
+		&:last-child{
+			margin-bottom: 0;
+			&:before{
+				display: none;
+			}
+			.transportation{
+				display: none;
+			}
+		}
 	}
 	.sort{
 		float:left;
 		width: 50px;
+		font-family: Impact, sans-serif;
+		color:$d-color-01;
+		font-size: 1.5em;
 	}
-	.img{
+	img{
 		float:left;
-		width: 200px;
+		max-width: 200px;
+		width: 20%;
+		border-radius: 10px;
+	}
+	.font{
+		float: left;
+		width: calc(80% - 50px);
+		padding: 5px 20px;
+		.time{
+			font-weight: bold;
+			color:$d-red_02;
+			font-size: 0.9em;
+		}
+		.title{
+			font-size: 1.2em;
+			font-weight: bold;
+		}
+		.con_font{
+			font-size: 0.9em;
+			color:$d-gray_02;
+		}
+	}
+	.edit{
+		position: absolute;
+		right:15px;
+		top:15px;
+		>a:after{
+			display: none;
+		}
+		.dropdown-menu{
+			border-radius: 10px;
+			border-color: $d-border-color;
+			a{
+				&:hover{
+					background: $d-gray_01;
+					color:$d-color-01-d;
+				}
+			}
+			i{
+					width: 20px;
+			}
+		}
+	}
+	.transportation{
+		position: absolute;
+		bottom: -40px;
+    left: 60px;
+		font-size: 0.9em;
+		img{
+			height: 25px;
+			width: 25px;
+			margin-right: 15px;
+		}
+	}
+}
+
+
+/*null_box*/
+.null_box{
+	float:left;
+	width: 100%;
+	background: $d-gray_01;
+	border-radius: 10px;
+	padding: 20px;
+	text-align: center;
+	margin: 10px 0;
+}
+
+
+/*traffic*/
+.traffic_place_box{
+	float: left;
+	width: 100%;
+	background: $d-gray_01;
+	border-radius: 10px;
+	padding: 10px ;
+	margin: 10px 0;
+	.start{
+		float: left;
+		width: calc(50% - 15px);
+		overflow: hidden;  
+  	white-space: nowrap;   
+  	text-overflow: ellipsis;
+		&:before{
+			content: "起";
+			display: inline-block;
+			background: $d-color-05;
+			color:#fff;
+			border-radius: 5px;
+			padding: 2px 5px;
+			margin-right: 10px;
+			line-height: 150%;
+		}
+	}
+	.arrow{
+		float: left;
+		width: 30px;
+		height: 30px;
+		text-align: center;
+	}
+	.end{
+		float: left;
+		width: calc(50% - 15px);
+		text-align: right;
+		overflow: hidden;  
+  	white-space: nowrap;   
+  	text-overflow: ellipsis;
+		&:after{
+			content: "終";
+			display: inline-block;
+			background: $d-color-02;
+			color:#fff;
+			border-radius: 5px;
+			padding: 2px 5px;
+			margin-left: 10px;
+			line-height: 150%;
+		}
+	}
+}
+
+.traffic_list{
+	float:left;
+	width: 100%;
+	margin-top: 10px;
+	.item{
+		float: left;
+		width: 100%;
+		background: $d-gray_01;
+		border-radius: 10px;
+		padding: 10px 20px;
+		margin: 5px 0;
+		border:solid 1px transparent;
+		&.active{
+			border:solid 1px $d-color-01;
+		}
+		.img{
+			width: 25px;
+			height: 25px;
+			display: inline-block;
+		}
+		.title{
+			font-size: 1.2em;
+			font-weight: bold;
+			display: inline-block;
+			padding: 0 10px;
+		}
+		.font{
+			color:$d-gray_03;
+			font-size: 0.9em;
+			display: inline-block;
+		}
 	}
 }
 
@@ -3100,7 +3406,6 @@ html:not(.sticky-header-active){
 }
 
 
-
 @media (max-width: 767px) {
 h2{
 	font-size:1.5em !important;
@@ -3460,6 +3765,20 @@ h5{
 		}
 	}
 }
+
+
+/*memberTripList*/
+.memberTripList{
+	img{
+		width: 200px;
+		border-radius: 10px;
+	}
+	.font{
+		width: 100%;
+		padding: 5px 20px 5px 50px;
+	}
+}
+
 
 }
 
