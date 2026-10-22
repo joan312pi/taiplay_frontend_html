@@ -770,7 +770,7 @@ img::-moz-selection {
 
 /*index_bg*/
 .index_bg{
-	background-image: url(img/customer/index_bg_02.jpg);
+	background-image: url(../img/customer/index_bg_02.jpg);
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-size: cover;
@@ -1169,7 +1169,7 @@ img::-moz-selection {
 		position: relative;
 		&::before{
 			content: "";
-			background: url(img/customer/index_02.png);
+			background: url(../img/customer/index_02.png);
 			width: 343px;
 			height: 209px;
 			background-repeat: no-repeat;
@@ -1180,7 +1180,7 @@ img::-moz-selection {
 		}
 		// &::after{
 		// 	content: none;
-		// 	background: url(img/customer/index_03.png);
+		// 	background: url(../img/customer/index_03.png);
 		// 	width: 200px;
 		// 	height: 163px;
 		// 	background-repeat: no-repeat;
@@ -1551,7 +1551,7 @@ input[type=radio] ,input[type=checkbox]{
 		position: relative;
 		&:after{
 			content: "";
-			background-image: url(img/customer/index_04.png);
+			background-image: url(../img/customer/index_04.png);
 			background-size: cover;
 			background-repeat: no-repeat;
 			width: 657px;
@@ -1578,7 +1578,7 @@ input[type=radio] ,input[type=checkbox]{
 		position: relative;
 		&::before{
 			content: "";
-			background: url(img/customer/index_05.png);
+			background: url(../img/customer/index_05.png);
 			background-size: cover;
 			background-repeat: no-repeat;
 			width: 178px;
@@ -1594,7 +1594,7 @@ input[type=radio] ,input[type=checkbox]{
 		position: relative;
 		&::after{
 			content: "";
-			background: url(img/customer/index_06.png);
+			background: url(../img/customer/index_06.png);
 			background-size: cover;
 			background-repeat: no-repeat;
 			width: 57px;
@@ -1638,7 +1638,7 @@ input[type=radio] ,input[type=checkbox]{
 				font-weight: bold;
 				font-size: 1.25em;
 				z-index: 9;
-				background: url(img/customer/tag_bg.png);
+				background: url(../img/customer/tag_bg.png);
 				background-repeat: no-repeat;
 				text-align: center;
 				padding-top: 15px;
@@ -1722,7 +1722,7 @@ input[type=radio] ,input[type=checkbox]{
 .page_banner{
 	float: left;
 	width: 100%;
-	background: url(..img/customer/page_banner.jpg);
+	background: url(..../img/customer/page_banner.jpg);
 	background-size: cover;
 	background-position: center cneter;
 	margin: 89px 0 0 0;
