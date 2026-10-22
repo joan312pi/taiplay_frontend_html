@@ -150,6 +150,16 @@ li {
   background: #666;
   color: #fff;
 }
+.btn.btn-light {
+  background: #fff !important;
+  color: #22a5a8;
+  border: solid 1px #22a5a8;
+}
+.btn.btn-light:hover, .btn.btn-light:focus {
+  background: #0c7678 !important;
+  color: #fff;
+  border: solid 1px #0c7678;
+}
 
 .btn_01 {
   color: #fff !important;
@@ -552,6 +562,13 @@ img::-moz-selection {
 .header-nav-login nav.closed,
 .header-nav-main nav.closed {
   display: none;
+}
+
+/*right_icon_link*/
+.right_icon_link {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
 }
 
 /*login*/
@@ -2068,7 +2085,8 @@ label[for=page_select] select {
   margin-top: 5px;
 }
 .users label {
-  margin: 2px 0 2px 0 !important;
+  margin: 2px -3px 2px 0 !important;
+  border: solid 3px transparent;
 }
 .users input[type=radio] {
   display: none;

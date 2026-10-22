@@ -31,6 +31,10 @@
 		<script>$.include("blocks/header.html");</script>
 		<!--header end-->
 
+		<!--right_icon_link start-->
+		<script>$.include("blocks/right_icon_link.html");</script>
+		<!--right_icon_link end-->
+
 		<div role="main" class="main">
 
 			<!--page_banner start--><!--建議尺寸1920*300px-->
@@ -90,7 +94,7 @@
 
 						</div>
 						<div class="con">
-							<button class="btn btn_add float-end" data-bs-toggle="modal" data-bs-target="#add_modal">新增</button>
+							<button class="btn btn_add float-end" data-bs-toggle="modal" data-bs-target="#trip_add_modal">新增</button>
 						
 							<div class="trip_list">
 								<div class="item">
@@ -201,6 +205,70 @@
 		<script>$.include("blocks/footer.html");</script>
 		<!--footer end-->
 
+		<!-- Modal start-->
+		<!--新增行程-->
+		<div class="modal fade" id="trip_add_modal" tabindex="-1" aria-labelledby="trip_add_label" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content">
+								<div class="modal-header">
+										<div class="modal-title">新增行程</div>
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+										<div class="row">
+												<div class="mb-3 col-12">
+														<label for="photo" class="form-label col-12">封面照片</label>
+														<div class="form_flie_img text-center">
+																<div class="box">
+																		<img id="coverPreview" src="img/logo_400x300.jpg" alt="封面照片">
+																		<button type="button" class="btn btn_file" id="changeBtn">更換</button>
+																		<input type="file" id="photoInput" accept="image/*" style="display: none;">
+																</div>
+														</div>
+												</div>
+
+												<div class="mb-3 col-12">
+														<label for="name" class="form-label required">行程名稱</label>
+														<input type="text" class="form-control" id="name" placeholder="請輸入行程名稱">
+														<!-- <div id="nameHelp" class="finvalid-feedback">請輸入行程名稱</div> -->
+												</div>
+
+												<!-- <div class="mb-3 col-12">
+														<label for="name" class="form-label">行程描述</label>
+														<textarea class="form-control" rows="3"></textarea>
+												</div>											 -->
+												
+												<div class="mb-3 col-12">
+														<label for="date" class="form-label col-12 required">行程日期</label>
+														
+														<label class="form-check-label">
+																<input type="radio" name="toggle_item_02" data-toggle="toggle_01" onclick="toggleChoice('toggle_item_02')" checked="">單日
+														</label>
+
+														<label class="form-check-label">
+																<input type="radio" name="toggle_item_02" data-toggle="toggle_02" onclick="toggleChoice('toggle_item_02');">區間
+														</label>
+
+														<div class="toggle_01">
+																<input type="date" class="form-control input-small" id="date">
+														</div>
+
+														<div class="toggle_02" style="display: none;">
+																<input type="date" class="form-control input-small d-inline-block"> ~ <input type="date" class="form-control input-small d-inline-block" id="date">
+														</div>
+														<!-- <div id="dateHelp" class="finvalid-feedback">請輸入行程日期</div> -->
+												</div>
+										</div>
+								</div>
+								<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+										<button type="button" class="btn btn-primary" data-bs-dismiss="modal">確認</button>
+								</div>
+						</div>
+				</div>
+		</div>
+		<!-- Modal end -->
+
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.appear.min.js"></script>
 		<script src="js/jquery.easing.min.js"></script>
@@ -213,70 +281,6 @@
 		<!--滾動效果 start-->
 		<script src="js/scrollreveal.min.js"></script>
 		<!--滾動效果 end-->
-
-		<!-- Modal start-->
-		<!--新增行程-->
-		<div class="modal fade" id="add_modal" tabindex="-1" aria-labelledby="add_label" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content">
-					<div class="modal-header">
-						<div class="modal-title">新增行程</div>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<div class="row">
-							<div class="mb-3 col-12">
-								<label for="photo" class="form-label col-12">封面照片</label>
-								<div class="form_flie_img text-center">
-									<div class="box">
-										<img id="coverPreview" src="img/logo_400x300.jpg" alt="封面照片">
-										<button type="button" class="btn btn_file" id="changeBtn">更換</button>
-										<input type="file" id="photoInput" accept="image/*" style="display: none;">
-									</div>
-								</div>
-							</div>
-
-							<div class="mb-3 col-12">
-								<label for="name" class="form-label required">行程名稱</label>
-								<input type="text" class="form-control" id="name" placeholder="請輸入行程名稱">
-								<!-- <div id="nameHelp" class="finvalid-feedback">請輸入行程名稱</div> -->
-							</div>
-
-							<!-- <div class="mb-3 col-12">
-								<label for="name" class="form-label">行程描述</label>
-								<textarea class="form-control" rows="3"></textarea>
-							</div>											 -->
-							
-							<div class="mb-3 col-12">
-								<label for="date" class="form-label col-12 required">行程日期</label>
-								
-								<label class="form-check-label">
-									<input type="radio" name="toggle_item_02" data-toggle="toggle_01" onclick="toggleChoice('toggle_item_02')" checked="">單日
-								</label>
-
-								<label class="form-check-label">
-									<input type="radio" name="toggle_item_02" data-toggle="toggle_02" onclick="toggleChoice('toggle_item_02');">區間
-								</label>
-
-								<div class="toggle_01">
-									<input type="date" class="form-control input-small" id="date">
-								</div>
-
-								<div class="toggle_02" style="display: none;">
-									<input type="date" class="form-control input-small d-inline-block"> ~ <input type="date" class="form-control input-small d-inline-block" id="date">
-								</div>
-								<!-- <div id="dateHelp" class="finvalid-feedback">請輸入行程日期</div> -->
-							</div>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-						<button type="button" class="btn btn-primary" data-bs-dismiss="modal">確認</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- Modal end-->
 
 		<script>
 			// 取得相關 HTML 元素

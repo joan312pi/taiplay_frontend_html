@@ -260,15 +260,25 @@ li {
 			color:#fff;
 		}
 	}
+	&.btn-light{
+		background:#fff !important;
+		color:$d-color-01;
+		border:solid 1px $d-color-01;
+		&:hover,&:focus{
+			background:$d-color-01-d !important;
+			color:#fff;
+			border:solid 1px $d-color-01-d;
+		}
+	}
 }
 .btn_01{
 	color:#fff!important;
 	background:$d-color-01;
 	letter-spacing:0.1em;
     &:hover ,&:focus{
-        background: $d-color-01-d;
-        color:#fff !important;
-		transition: all 0.5s;
+			background: $d-color-01-d;
+			color:#fff !important;
+			transition: all 0.5s;
     }
 }
 .btn_delete{
@@ -653,6 +663,14 @@ img::-moz-selection {
 .header-nav-login nav.closed,
 .header-nav-main nav.closed {
     display: none;
+}
+
+
+/*right_icon_link*/
+.right_icon_link{
+	position: absolute;
+	bottom: 50px;
+	right:0;
 }
 
 
@@ -2340,7 +2358,8 @@ label[for=page_select] select{
 .users{
 	margin-top: 5px;
 	label{
-		margin: 2px 0 2px 0 !important;
+		margin: 2px -3px 2px 0 !important;
+		border:solid 3px transparent;
 	}
 	input[type="radio"] {
 		display: none;
