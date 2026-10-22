@@ -249,3 +249,21 @@ function toggleChoice(inputName) {
 }
 //#endregion
 
+
+$(document).ready(function() {
+  $('.map_show_icon').on('click', function() {
+    // 1. 切換 .map_bottom_box 的顯示與隱藏 (可用 slideToggle 滑動或 toggle 動畫)
+    $('.map_bottom_box').slideToggle(300);
+
+    // 2. 切換 icon 樣式類別（觸發 CSS 旋轉）
+    $(this).toggleClass('collapsed');
+
+    // 3. 判斷並更新 title 屬性
+    if ($(this).hasClass('collapsed')) {
+      $(this).attr('title', '展開');
+    } else {
+      $(this).attr('title', '收合');
+    }
+  });
+});
+

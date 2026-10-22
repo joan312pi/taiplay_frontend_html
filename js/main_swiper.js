@@ -196,25 +196,31 @@ $(function($) {
 	});
 
 	//case_img
-	var swiper4 = new Swiper(".banner_04", {
+	var swiper4 = new Swiper(".map_banner", {
 		loop: true,
 		// slidesPerView: 2,
-		spaceBetween: 0,
-		autoplay:true,//自動播放
+		spaceBetween: 10,
+		autoplay:false,//自動播放
 		autoplay: {
 			delay: 3000,//延遲時間
 		},
 		breakpoints: {
 			0: {
-				slidesPerView: 3,
+				slidesPerView: 1,
 			},
 			576: {
-				slidesPerView: 4,
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
 			},
 			992: {
-				slidesPerView: 5,
+				slidesPerView: 4,
 			},
 			1200: {
+				slidesPerView: 5,
+			},
+			1400: {
 				slidesPerView: 6,
 			},
 		},
