@@ -92,26 +92,23 @@
 						<div class="con">
 							<form id="memberForm">
 								<div class="row">
-									<!-- 姓名 -->
+
 									<div class="mb-3 col-12 col-md-6 sr_bottom">
 										<label for="username" class="form-label required">姓名</label>
 										<!-- 加上 data-masked 與 data-original 屬性供切換用 -->
 										<input type="text" class="form-control maskable-field" id="username" placeholder="請輸入姓名" value="王○明" data-masked="王○明" data-original="王小明" readonly>
 									</div>
 
-									<!-- 電子信箱 -->
 									<div class="mb-3 col-12 col-md-6 sr_bottom">
 										<label for="email" class="form-label required">電子信箱</label>
 										<input type="email" class="form-control maskable-field" id="email" placeholder="請輸入電子信箱" value="abc***@gmail.com" data-masked="abc***@gmail.com" data-original="abc1234@gmail.com" readonly>
 									</div>
 									
-									<!-- 手機號碼 -->
 									<div class="mb-3 col-12 col-md-6 sr_bottom">
 										<label for="phone" class="form-label">手機號碼</label>
 										<input type="text" class="form-control maskable-field" id="phone" placeholder="請輸入手機號碼" value="0912***567" data-masked="0912***567" data-original="0912345567" readonly>
 									</div>
 
-									<!-- 性別 -->
 									<div class="mb-3 col-12 col-md-6 sr_bottom">
 										<label for="gender" class="form-label">性別</label><br>
 										<div id="genderGroup">
@@ -127,13 +124,11 @@
 										</div>
 									</div>
 
-									<!-- 生日 -->
 									<div class="mb-3 col-12 col-md-6 sr_bottom">
 										<label for="birthday" class="form-label">生日</label>
 										<input type="date" class="form-control maskable-field" id="birthday" value="1990-01-01" data-masked="1990-01-01" data-original="1990-05-20" readonly>
 									</div>
 									
-									<!-- 學歷 -->
 									<div class="mb-3 col-12 col-md-4 sr_bottom">
 										<label for="educational" class="form-label">學歷</label>
 										<select class="w-auto form-select" id="educational" disabled>
@@ -149,7 +144,6 @@
 										</select>
 									</div>
 
-									<!-- 居住縣市 -->
 									<div class="mb-3 col-6 col-md-3 sr_bottom">
 										<label for="city" class="form-label">居住縣市</label>
 										<select class="form-select" id="city" disabled>
@@ -165,36 +159,27 @@
 										</select>
 									</div>
 
-									<!-- 地址 -->
 									<div class="mb-3 col-12 col-md-9 sr_bottom">
 										<label for="address" class="form-label">地址</label>
 										<input type="text" class="form-control maskable-field" id="address" placeholder="請輸入地址" value="台北市信義區***路*" data-masked="台北市信義區***路*" data-original="台北市信義區基隆路一段" readonly>
 									</div>
 
-									<!-- 代表圖 -->
 									<div class="mb-3 col-12 sr_bottom">
 										<label for="avatar" class="form-label">代表圖</label>
+										<div class="view_file edit-hidden-item" style="display: none;">
+											<a href="javascript:;" class="btn btn-dark m-1 float-left" title="檢視檔案">檢視檔案 <i class="fa-solid fa-download download"></i></a>
+											<a href="#" class="delete"><i class="fa-solid fa-xmark"></i></a>
+										</div>
 										<input type="file" class="form-control edit-hidden-item" id="avatar" style="display: none;">
 										<div class="finvalid-feedback">建議尺寸 200*200 px</div>
 									</div>
 
-									<!-- 驗證碼 (編輯時才顯示) -->
-									<div class="verification_code mb-3 col-12 sr_bottom edit-hidden-item" style="display: none;">
-										<label for="verification" class="form-label">驗證碼</label><br>
-										<input type="text" id="verification" placeholder="請輸入驗證碼" class="form-control d-inline w-auto" />
-										<img id="CaptchaImage" src="img/Pic_Check01.gif" alt="驗證碼" style="height: 36px !important;vertical-align: top;">
-										<a href="#" class="code_btn d-inline-block p-2" title="驗證碼重新整理">
-											<i class="fa fa-refresh" aria-hidden="true"></i>
-											<span class="sr-only">驗證碼重新整理</span>
-										</a>
-									</div>
 								</div>
 
-								<!-- 按鈕區 -->
-								<div class="btn_box text-center sr_bottom">
-									<button type="button" class="btn btn_01" id="btnEditMode">檢視修改</button>
-									<button type="submit" class="btn btn_01" id="btnSave" style="display: none;">儲存</button>
+								<div class="btn_box text-center">
+									<button type="button" class="btn btn-primary" id="btnEditMode">檢視修改</button>
 									<button type="button" class="btn btn-secondary" id="btnCancel" style="display: none;">取消</button>
+									<button type="submit" class="btn btn-primary" id="btnSave" style="display: none;">儲存</button>
 								</div>
 							</form>
 						</div>
@@ -228,7 +213,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="passwordModalLabel">身分驗證</h5>
+						<div class="modal-title" id="passwordModalLabel">身分驗證</div>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
@@ -241,24 +226,6 @@
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
 						<button type="button" class="btn btn-primary" id="btnSubmitPassword">確認</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!--修改資料-->
-		<div class="modal fade" id="ok_modal" tabindex="-1" aria-labelledby="ok_label" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
-				<div class="modal-content">
-					<div class="modal-header">
-						<div class="modal-title" id="edit_label">修改資料</div>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						已修改儲存完成。
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary" data-bs-dismiss="modal">確認</button>
 					</div>
 				</div>
 			</div>
@@ -281,17 +248,12 @@
 			$('#btnSubmitPassword').on('click', function() {
 				const pwd = $('#checkPassword').val();
 				
-				// 模擬密碼驗證 (實際專案應透過 AJAX 傳送至後端驗證)
 				if (pwd === "123456") { // 假設正確密碼為 "123456"
-					// 關閉 Modal
 					var modalEl = document.getElementById('passwordModal');
 					var modal = bootstrap.Modal.getInstance(modalEl);
 					modal.hide();
 					
-					// 解除隱碼，顯示真實資料與編輯狀態
 					enableEditableMode();
-					
-					// 啟動 5 分鐘計時器
 					resetInactivityTimer();
 					
 				} else {
@@ -301,59 +263,51 @@
 
 			// 3. 切換為「編輯/完整檢視」狀態
 			function enableEditableMode() {
-				// 將欄位值切換為完整原資料 (data-original)
 				$('.maskable-field').each(function() {
 					$(this).val($(this).attr('data-original'));
 					$(this).prop('readonly', false);
 				});
 				
-				// 開放其他表單元件操作
 				$('#educational, #city').prop('disabled', false);
 				$('#genderGroup input').prop('disabled', false);
-				
-				// 顯示上傳檔案與驗證碼欄位
 				$('.edit-hidden-item').show();
 				
-				// 切換按鈕顯示
 				$('#btnEditMode').hide();
 				$('#btnSave, #btnCancel').show();
 			}
 
-			// 4. 切換回「隱碼唯讀」狀態
-			function resetToMaskedMode() {
+			// 4. 切換回「隱碼唯讀」狀態（透過參數控制是否顯示超時警告）
+			function resetToMaskedMode(showAlert = true) {
 				clearTimeout(inactivityTimer);
 				
-				// 將欄位值切換回隱碼資料 (data-masked)
 				$('.maskable-field').each(function() {
 					$(this).val($(this).attr('data-masked'));
 					$(this).prop('readonly', true);
 				});
 				
-				// 鎖定其他表單元件
 				$('#educational, #city').prop('disabled', true);
 				$('#genderGroup input').prop('disabled', true);
-				
-				// 隱藏上傳檔案與驗證碼欄位
 				$('.edit-hidden-item').hide();
 				
-				// 切換按鈕顯示
 				$('#btnSave, #btnCancel, #btnEditMode').hide();
 				$('#btnEditMode').show();
 				
-				alert('已超過 5 分鐘無操作，為保障帳號安全，已自動恢復隱碼狀態。');
+				// 只有在真正因「閒置超時」觸發時才跳出警告
+				if (showAlert) {
+					alert('已超過 5 分鐘無操作，為保障帳號安全，已自動恢復隱碼狀態。');
+				}
 			}
 
-			// 5. 5分鐘計時器重置機制（只要使用者在畫面上滑鼠移動、鍵盤輸入或點擊，就重新計時）
+			// 5. 5分鐘計時器重置機制
 			function resetInactivityTimer() {
 				clearTimeout(inactivityTimer);
 				inactivityTimer = setTimeout(function() {
-					resetToMaskedMode();
+					resetToMaskedMode(true); // 閒置超時：顯示警告
 				}, TIMEOUT_DURATION);
 			}
 
 			// 監聽使用者動作以重置計時器
 			$(document).on('mousemove keypress click', function() {
-				// 只有在編輯解鎖狀態下才啟動計時重置
 				if ($('#btnSave').is(':visible')) {
 					resetInactivityTimer();
 				}
@@ -361,16 +315,65 @@
 
 			// 6. 點擊取消按鈕
 			$('#btnCancel').on('click', function() {
-				resetToMaskedMode();
+				resetToMaskedMode(false); // 取消操作：不顯示超時警告
 			});
 
 			// 7. 點擊儲存按鈕
 			$('#memberForm').on('submit', function(e) {
-				e.preventDefault();
-				// 這裡可加入 AJAX 儲存邏輯
-				alert('資料儲存成功！');
-				resetToMaskedMode(); // 儲存後可視需求切回隱碼或保持
+				e.preventDefault(); 
+				clearTimeout(inactivityTimer);
+
+				const formData = {
+					username: $('#username').val(),
+					email: $('#email').val(),
+					phone: $('#phone').val(),
+					gender: $('input[name="gender"]:checked').val(),
+					birthday: $('#birthday').val(),
+					educational: $('#educational').val(),
+					city: $('#city').val(),
+					address: $('#address').val()
+				};
+
+				console.log("正在送出資料到後端...", formData);
+				
+				setTimeout(function() {
+					// 更新畫面上欄位的 data-original 與 data-masked
+					$('#username').attr('data-original', formData.username);
+					$('#username').attr('data-masked', maskUsername(formData.username)); 
+
+					$('#email').attr('data-original', formData.email);
+					$('#email').attr('data-masked', maskEmail(formData.email));
+					
+					$('#phone').attr('data-original', formData.phone);
+					$('#phone').attr('data-masked', maskPhone(formData.phone));
+
+					// 提示儲存成功
+					alert('資料儲存成功！');
+					
+					// 恢復隱碼狀態，且不顯示 5 分鐘超時警告 (傳入 false)
+					resetToMaskedMode(false);
+
+				}, 500); 
 			});
+
+			// 前端隱碼輔助函式
+			function maskUsername(name) {
+				if (!name) return '';
+				if (name.length === 2) return name[0] + '○';
+				if (name.length > 2) return name[0] + '○' + name.slice(2);
+				return name;
+			}
+			function maskEmail(email) {
+				if (!email) return '';
+				const parts = email.split('@');
+				if (parts[0].length <= 3) return parts[0] + '***@' + parts[1];
+				return parts[0].slice(0, 3) + '***@' + parts[1];
+			}
+			function maskPhone(phone) {
+				if (!phone) return '';
+				if (phone.length < 10) return phone;
+				return phone.slice(0, 4) + '***' + phone.slice(7);
+			}
 		</script>
 		
 	</body>

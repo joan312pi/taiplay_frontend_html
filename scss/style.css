@@ -164,6 +164,16 @@ li {
   color: #fff;
   border: solid 1px #0c7678;
 }
+.btn.btn-dark {
+  background: #666 !important;
+  color: #fff;
+  border: solid 1px #666;
+}
+.btn.btn-dark:hover, .btn.btn-dark:focus {
+  background: #333 !important;
+  color: #fff;
+  border: solid 1px #333;
+}
 
 .btn_01 {
   color: #fff !important;
@@ -1408,6 +1418,25 @@ input[type=radio], input[type=checkbox] {
 }
 .verification_code img {
   margin-top: 4px;
+}
+
+/*view_file*/
+.view_file {
+  float: left;
+  width: 100%;
+}
+.view_file a {
+  width: auto !important;
+  float: left;
+  text-decoration: none !important;
+}
+.view_file a.btn {
+  padding: 6.5px 9.3px !important;
+  width: 102px;
+  text-decoration: none !important;
+}
+.view_file:hover {
+  text-decoration: none !important;
 }
 
 /*index_trip*/

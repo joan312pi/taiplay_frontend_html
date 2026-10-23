@@ -274,6 +274,16 @@ li {
 			border:solid 1px $d-color-01-d;
 		}
 	}
+	&.btn-dark{
+		background:$d-gray_04 !important;
+		color:#fff;
+		border:solid 1px $d-gray_04;
+		&:hover,&:focus{
+			background:$d-gray_05 !important;
+			color:#fff;
+			border:solid 1px $d-gray_05 ;
+		}
+	}
 }
 .btn_01{
 	color:#fff!important;
@@ -1554,6 +1564,26 @@ input[type=radio] ,input[type=checkbox]{
 	}
 	img{
 		margin-top: 4px;
+	}
+}
+
+
+/*view_file*/
+.view_file{
+	float: left;
+	width: 100%;
+	a{
+		width: auto!important;
+		float: left;
+		text-decoration:none!important;
+	}
+	a.btn{
+		padding: 6.5px 9.3px !important;
+		width: 102px;
+		text-decoration: none !important;
+	}
+	&:hover{
+		text-decoration:none!important;
 	}
 }
 
