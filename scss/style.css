@@ -251,6 +251,7 @@ li {
   padding: 15px 5px 35px !important;
   background: #0c7678 !important;
   opacity: 0.5 !important;
+  min-width: 40px !important;
 }
 .scroll-to-top:hover, .scroll-to-top:focus {
   opacity: 1 !important;
@@ -603,7 +604,7 @@ img::-moz-selection {
 .right_icon_link {
   position: fixed;
   bottom: 60px;
-  right: 16px;
+  right: 10px;
   z-index: 999;
 }
 .right_icon_link .only_icon {
@@ -1093,6 +1094,9 @@ img::-moz-selection {
   font-weight: bold;
   margin: 3px;
   height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .nav-tabs a:hover {
   background-color: #F0F9F8 !important;
@@ -1282,13 +1286,15 @@ input[type=radio], input[type=checkbox] {
   border-color: #E2E8F0;
 }
 
-.agree_checkbox > input {
+.agree_checkbox input {
   float: left;
+  width: 35px;
 }
-.agree_checkbox > div {
+.agree_checkbox .con_font {
   float: left;
+  width: calc(100% - 35px);
   margin-top: -3px;
-  padding-left: 10px;
+  vertical-align: text-bottom;
 }
 
 .form-select {
@@ -2373,6 +2379,7 @@ label[for=page_select] select {
   position: relative;
 }
 .trip_overview > div .box .top_btn_box {
+  position: absolute;
   top: 15px;
   right: 15px;
 }
@@ -2590,6 +2597,8 @@ label[for=page_select] select {
   list-style: none;
   padding-left: 0px;
   overflow-x: scroll;
+  padding-bottom: 20px;
+  margin-bottom: 0;
 }
 .member_trip_list_map > li {
   float: left;
@@ -3337,6 +3346,12 @@ a:hover .imh_down img {
   .index_link {
     margin: -20px auto 30px auto;
   }
+  .index_link .search input {
+    width: calc(100% - 50px) !important;
+  }
+  .index_link .search .btn {
+    padding: 7.5px 10px;
+  }
   .index_link .list .item {
     width: 33.3333333333% !important;
   }
@@ -3494,6 +3509,9 @@ a:hover .imh_down img {
   .member_trip_list .font {
     width: 100%;
     padding: 5px 20px 5px 50px;
+  }
+  .favorite_list .item a .img {
+    width: 120px;
   }
   /*map_main*/
   .map_main {

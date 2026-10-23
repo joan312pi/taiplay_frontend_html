@@ -6299,9 +6299,9 @@ window.theme.fn = {
 
 
 				// Visible Mobile
-				if (!self.options.visibleMobile) {
-					$el.addClass('hidden-mobile');
-				}
+				// if (!self.options.visibleMobile) {
+				// 	$el.addClass('hidden-mobile');
+				// }
 
 				// Label
 				if (self.options.label) {

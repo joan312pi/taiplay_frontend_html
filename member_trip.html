@@ -60,7 +60,7 @@
 
 							<div class="user_box">
 								<div class="img">
-									<img src="img/300x300.png"  alt="" style="background-image: url(/img/customer/member_pic.jpg); background-position: center center; background-size: cover;">
+									<img src="img/300x300.png"  alt="" style="background-image: url(img/customer/member_pic.jpg); background-position: center center; background-size: cover;">
 								</div>
 								<div class="title">王小明</div>
 								<div class="mail">test@serive.com</div>
@@ -228,12 +228,7 @@
 														<label for="name" class="form-label required">行程名稱</label>
 														<input type="text" class="form-control" id="name" placeholder="請輸入行程名稱">
 														<!-- <div id="nameHelp" class="finvalid-feedback">請輸入行程名稱</div> -->
-												</div>
-
-												<!-- <div class="mb-3 col-12">
-														<label for="name" class="form-label">行程描述</label>
-														<textarea class="form-control" rows="3"></textarea>
-												</div>											 -->
+												</div>									 -->
 												
 												<div class="mb-3 col-12">
 														<label for="date" class="form-label col-12 required">行程日期</label>
@@ -243,15 +238,15 @@
 														</label>
 
 														<label class="form-check-label">
-																<input type="radio" name="toggle_item_02" data-toggle="toggle_02" onclick="toggleChoice('toggle_item_02');">區間
+															<input type="radio" name="toggle_item_02" data-toggle="toggle_02" onclick="toggleChoice('toggle_item_02');">區間
 														</label>
 
 														<div class="toggle_01">
-																<input type="date" class="form-control input-small" id="date">
+															<input type="date" class="form-control input-small" id="date" placeholder="請選擇日期">
 														</div>
 
 														<div class="toggle_02" style="display: none;">
-																<input type="date" class="form-control input-small d-inline-block"> ~ <input type="date" class="form-control input-small d-inline-block" id="date">
+															<input type="date" class="form-control input-small d-inline-block" placeholder="請選擇開始日期"> ~ <input type="date" class="form-control input-small d-inline-block" id="date" placeholder="請選擇結束日期">
 														</div>
 														<!-- <div id="dateHelp" class="finvalid-feedback">請輸入行程日期</div> -->
 												</div>

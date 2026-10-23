@@ -352,6 +352,7 @@ li {
 	padding:15px 5px 35px !important;
 	background:$d-color-01-d  !important;
 	opacity: 0.5 !important;
+	min-width: 40px !important;
 	&:hover, &:focus {
 		opacity: 1 !important;
 	}
@@ -711,7 +712,7 @@ img::-moz-selection {
 .right_icon_link{
 	position: fixed;
 	bottom:60px;
-	right: 16px;
+	right: 10px;
 	z-index: 999;
 	.only_icon{
 		display: flex;
@@ -1251,6 +1252,9 @@ img::-moz-selection {
 		font-weight: bold;
 		margin:3px;
 		height: 40px;
+		display:flex;
+		align-items:center;
+		justify-content:center;
 		&:hover{
 			background-color: $d-color-01-l !important;
 		}
@@ -1436,13 +1440,15 @@ input[type=radio] ,input[type=checkbox]{
 	border-color: $d-border-color;
 }
 .agree_checkbox{
-	>input{
-		float:left;
+	input{
+		float: left;
+		width: 35px;
 	}
-	>div{
-		float:left;
+	.con_font{
+		float: left;
+		width: calc(100% - 35px);
 		margin-top: -3px;
-		padding-left: 10px;
+		vertical-align: text-bottom;
 	}
 }
 .form-select{
@@ -2648,12 +2654,13 @@ label[for=page_select] select{
 		padding: 5px;
 		.box{
 			float: left;
-    	width: 100%;
+    		width: 100%;
 			@include border;
 			// @include box-shadow;
 			padding: 20px;
 			position: relative;
 			.top_btn_box{
+				position: absolute;
 				top:15px;
 				right:15px;
 			}
@@ -2885,6 +2892,8 @@ label[for=page_select] select{
 	list-style: none;
 	padding-left: 0px;
 	overflow-x: scroll;
+	padding-bottom: 20px;
+	margin-bottom: 0;
 	>li{
 		float: left;
 		width: 260px;
@@ -3831,6 +3840,14 @@ h5{
 /*index_link*/
 .index_link{
 	margin: -20px auto 30px auto;
+	.search{
+		input {
+			width: calc(100% - 50px) !important; 
+		}
+		.btn{
+			padding: 7.5px 10px;
+		}
+	}
 	.list{
 		.item{
 			width:calc(100% / 3) !important;
@@ -4049,6 +4066,17 @@ h5{
 	.font{
 		width: 100%;
 		padding: 5px 20px 5px 50px;
+	}
+}
+
+
+.favorite_list{
+	.item{
+		a{
+			.img{
+				width: 120px;
+			}
+		}
 	}
 }
 
