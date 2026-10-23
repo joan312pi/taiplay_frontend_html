@@ -161,7 +161,7 @@ $(function($) {
 	});
 
 
-	//index_link
+	//place_banner
 	var swiper3 = new Swiper(".place_banner", {
 		loop: false,
 		// slidesPerView: 2,
@@ -195,7 +195,7 @@ $(function($) {
 		},
 	});
 
-	//case_img
+	//map_banner
 	var swiper4 = new Swiper(".map_banner", {
 		loop: true,
 		// slidesPerView: 2,
@@ -219,10 +219,7 @@ $(function($) {
 			},
 			1200: {
 				slidesPerView: 5,
-			},
-			1400: {
-				slidesPerView: 6,
-			},
+			}
 		},
 		pagination: {
 			el: ".swiper-pagination",

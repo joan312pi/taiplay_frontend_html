@@ -25,13 +25,17 @@
   background: #ec6a4a !important;
 }
 
+.red {
+  color: #c00;
+}
+
 /*--------------------------------------------------------------------------------------------------*/
 body {
   margin: 0;
   padding: 0;
   line-height: 170%;
   font-family: "微軟正黑體", "open-sans", Times New Roman, sans-serif;
-  color: #666;
+  color: #555;
   background: #EDF2F7;
   font-size: 1em;
   position: relative;
@@ -605,6 +609,9 @@ img::-moz-selection {
 .right_icon_link .only_icon {
   display: flex;
 }
+.right_icon_link .dropdown {
+  margin: 0 0 10px 0;
+}
 
 /*login*/
 .login .fa-circle-user {
@@ -1085,6 +1092,7 @@ img::-moz-selection {
   border-radius: 30px !important;
   font-weight: bold;
   margin: 3px;
+  height: 40px;
 }
 .nav-tabs a:hover {
   background-color: #F0F9F8 !important;
@@ -1099,6 +1107,11 @@ img::-moz-selection {
   box-shadow: none;
   border: none;
   padding: 15px 0;
+  float: left;
+  width: 100%;
+}
+.tab-content .date {
+  padding-bottom: 10px;
 }
 
 /*favorite*/
@@ -1478,6 +1491,7 @@ input[type=radio], input[type=checkbox] {
   z-index: 9;
   background: url(../img/customer/tag_bg.png);
   background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
   padding-top: 15px;
 }
@@ -1510,7 +1524,7 @@ input[type=radio], input[type=checkbox] {
 #footer .share {
   background: #22a5a8;
   width: 100%;
-  padding: 25px;
+  padding: 15px;
   text-align: center;
 }
 #footer .share .item {
@@ -1528,7 +1542,7 @@ input[type=radio], input[type=checkbox] {
   justify-content: center;
 }
 #footer .share .item a i {
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: #22a5a8;
 }
 #footer .share .item a:hover {
@@ -1537,9 +1551,22 @@ input[type=radio], input[type=checkbox] {
 #footer .share .item a:hover i {
   color: #fff;
 }
+#footer .footer_menu {
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+#footer .footer_menu a:after {
+  content: "|";
+  color: #ccc;
+  margin-left: 5px;
+}
+#footer .footer_menu a:last-child:after {
+  display: none;
+}
 #footer .copyright {
   text-align: center;
   padding: 20px;
+  font-size: 0.9em;
 }
 #footer .copyright .item {
   display: inline-block;
@@ -1554,7 +1581,7 @@ input[type=radio], input[type=checkbox] {
 .page_banner {
   float: left;
   width: 100%;
-  background: url(..../img/customer/page_banner.jpg);
+  background: url(../img/customer/page_banner.jpg);
   background-size: cover;
   background-position: center cneter;
   margin: 89px 0 0 0;
@@ -1624,6 +1651,17 @@ input[type=radio], input[type=checkbox] {
 .main_con .container h3 {
   position: relative;
   padding: 10px 0 5px 0;
+}
+.main_con .con_small {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.main_con .con_small ol > li {
+  margin-bottom: 20px;
+}
+.main_con .con_small ol ul {
+  list-style-type: disc;
 }
 
 /*main*/
@@ -1905,11 +1943,11 @@ label[for=page_select] select {
   max-width: 500px;
   width: 95%;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 20px;
-  padding: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  padding: 5px;
   left: 50%;
-  top: 40px;
+  top: 35px;
   transform: translate(-50%, -50%);
 }
 .map_search .search_icon {
@@ -1934,6 +1972,9 @@ label[for=page_select] select {
   background: rgba(255, 255, 255, 0.9);
   padding: 20px 30px 10px 30px;
   border-radius: 20px 20px 0 0;
+}
+.map_bottom .map_bottom_box .tab-content {
+  min-height: 168px;
 }
 .map_bottom .map_show_icon {
   text-align: center;
@@ -1977,6 +2018,11 @@ label[for=page_select] select {
 .map_place_list .item .img {
   float: left;
   width: 100px;
+  position: relative;
+}
+.map_place_list .item .img .favorite_box {
+  position: absolute;
+  right: 0;
 }
 .map_place_list .item .img img {
   border-radius: 10px;
@@ -2411,26 +2457,26 @@ label[for=page_select] select {
 }
 
 /*expense_type*/
-.expense_type input[type=radio] {
+.expense_type input[type=radio], .traffic_type input[type=radio] {
   display: none;
 }
-.expense_type label {
+.expense_type label, .traffic_type label {
   background: #f5f5f5;
   border-radius: 30px;
   padding: 2px 10px 5px 10px;
   margin: 2px 5px 2px 0px !important;
 }
-.expense_type label.active {
+.expense_type label.active, .traffic_type label.active {
   background: #22a5a8;
   color: #fff;
 }
-.expense_type label.active .svg-img path {
+.expense_type label.active .svg-img path, .traffic_type label.active .svg-img path {
   fill: #fff;
 }
-.expense_type label .title {
+.expense_type label .title, .traffic_type label .title {
   display: none;
 }
-.expense_type .svg-img {
+.expense_type .svg-img, .traffic_type .svg-img {
   height: 25px;
   width: 25px;
   vertical-align: text-top;
@@ -2447,26 +2493,26 @@ label[for=page_select] select {
   top: 0px !important;
 }
 
-/*memberTripList*/
-.memberTripList {
+/*member_trip_list*/
+.member_trip_list {
   float: left;
   width: 100%;
   list-style: none;
   padding-left: 0px;
 }
-.memberTripList > li {
+.member_trip_list > li {
   float: left;
   width: 100%;
-  background: #fff;
+  background: #f5f5f5;
   border-radius: 20px;
   border: solid 1px #E2E8F0;
   border-radius: 10px;
-  box-shadow: 0 2px 15px 2px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 15px 20px 10px 20px;
   margin: 10px 0 40px 0;
   position: relative;
+  cursor: move;
 }
-.memberTripList > li::before {
+.member_trip_list > li::before {
   content: ".............";
   position: absolute;
   left: 27px;
@@ -2478,61 +2524,133 @@ label[for=page_select] select {
   transform: rotate(90deg);
   font-size: 1.1em;
 }
-.memberTripList > li:last-child {
+.member_trip_list > li:last-child {
   margin-bottom: 0;
 }
-.memberTripList > li:last-child:before {
+.member_trip_list > li:last-child:before {
   display: none;
 }
-.memberTripList > li:last-child .transportation {
+.member_trip_list > li:last-child .transportation {
   display: none;
 }
-.memberTripList .sort {
+.member_trip_list .sort {
   float: left;
   width: 50px;
   font-family: Impact, sans-serif;
   color: #22a5a8;
   font-size: 1.5em;
 }
-.memberTripList img {
+.member_trip_list img {
   float: left;
   max-width: 200px;
   width: 20%;
   border-radius: 10px;
 }
-.memberTripList .font {
+.member_trip_list .font {
   float: left;
   width: calc(80% - 50px);
   padding: 5px 20px;
 }
-.memberTripList .font .time {
+.member_trip_list .font .time {
   font-weight: bold;
   color: #900;
   font-size: 0.9em;
 }
-.memberTripList .font .title {
+.member_trip_list .font .title {
   font-size: 1.2em;
   font-weight: bold;
 }
-.memberTripList .font .con_font {
+.member_trip_list .font .con_font {
   font-size: 0.9em;
   color: #ccc;
 }
-.memberTripList .edit {
+.member_trip_list .edit {
   position: absolute;
   right: 15px;
   top: 15px;
 }
-.memberTripList .transportation {
+.member_trip_list .transportation {
   position: absolute;
   bottom: -40px;
   left: 60px;
   font-size: 0.9em;
 }
-.memberTripList .transportation img {
+.member_trip_list .transportation img {
   height: 25px;
   width: 25px;
   margin-right: 15px;
+}
+
+/*member_trip_list_map*/
+.member_trip_list_map {
+  float: left;
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+  list-style: none;
+  padding-left: 0px;
+  overflow-x: scroll;
+}
+.member_trip_list_map > li {
+  float: left;
+  width: 260px;
+  flex-shrink: 0;
+  background: #f5f5f5;
+  border-radius: 20px;
+  border: solid 1px #E2E8F0;
+  border-radius: 10px;
+  padding: 10px 20px 5px 20px;
+  margin: 0 100px 0 0;
+  position: relative;
+  cursor: move;
+}
+.member_trip_list_map > li:last-child {
+  margin-right: 0;
+}
+.member_trip_list_map > li:last-child .transportation {
+  display: none;
+}
+.member_trip_list_map .sort {
+  float: left;
+  width: 30px;
+  font-family: Impact, sans-serif;
+  color: #22a5a8;
+  font-size: 1.5em;
+}
+.member_trip_list_map .font {
+  float: left;
+  width: calc(100% - 30px);
+  padding: 0px 20px 0px 10px;
+}
+.member_trip_list_map .font .time {
+  font-weight: bold;
+  color: #900;
+  font-size: 0.9em;
+}
+.member_trip_list_map .font .title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.member_trip_list_map .font .con_font {
+  font-size: 0.9em;
+  color: #ccc;
+}
+.member_trip_list_map .transportation {
+  position: absolute;
+  top: 10px;
+  right: -100px;
+  text-align: center;
+  width: 100px;
+}
+.member_trip_list_map .transportation img {
+  height: 40px;
+  width: 40px;
+}
+.member_trip_list_map .transportation .con_font {
+  width: 100%;
+  font-size: 0.9em;
+  border-top: dotted 2px #ccc;
+  padding-top: 5px;
 }
 
 /*null_box*/
@@ -2900,18 +3018,6 @@ a:hover .imh_down img {
   .index_popular {
     padding: 50px 0;
   }
-  /*main*/
-  .menu_left .sidebar_menu, .menu_right .sidebar_menu {
-    width: 260px;
-    margin: 0;
-  }
-  .menu_left .main_con, .menu_right .main_con {
-    width: calc(100% - 260px);
-  }
-  /*main_con*/
-  .main_con {
-    background-size: 150%;
-  }
   /*page_banner*/
   .page_banner {
     margin: 89px 0 0 0;
@@ -2993,18 +3099,7 @@ a:hover .imh_down img {
   }
   /*index_popular*/
   .index_popular {
-    padding: 100px 0;
-  }
-  /*main*/
-  .menu_left .sidebar_menu, .menu_right .sidebar_menu {
-    width: 300px;
-  }
-  .menu_left .main_con, .menu_right .main_con {
-    width: calc(100% - 300px);
-  }
-  /*main_con*/
-  .main_con {
-    background-size: 150%;
+    padding: 70px 0;
   }
   /*page_banner*/
   .page_banner {
@@ -3098,6 +3193,9 @@ a:hover .imh_down img {
   }
   h5 {
     font-size: 1.1em;
+  }
+  .container {
+    padding: 0 20px;
   }
   .date {
     font-size: 0.8em;
@@ -3290,10 +3388,25 @@ a:hover .imh_down img {
   }
   /*index_popular*/
   .index_popular {
-    padding: 50px 0;
+    padding: 50px 0 20px 0;
   }
   .index_popular .list .item {
     width: 50%;
+  }
+  .index_popular .list .item .tag {
+    position: absolute;
+    width: 35px;
+    height: 50px;
+    left: 15px;
+    color: #fff;
+    font-size: 1em;
+    padding-top: 8px;
+  }
+  .index_popular .list .item .font .title {
+    font-size: 1.1em;
+  }
+  .index_popular .btn_box {
+    margin-top: 0;
   }
   /*footer*/
   #footer {
@@ -3373,12 +3486,12 @@ a:hover .imh_down img {
   .trip_list .item:nth-child(2n+1) {
     clear: both;
   }
-  /*memberTripList*/
-  .memberTripList img {
+  /*member_trip_list*/
+  .member_trip_list img {
     width: 200px;
     border-radius: 10px;
   }
-  .memberTripList .font {
+  .member_trip_list .font {
     width: 100%;
     padding: 5px 20px 5px 50px;
   }
@@ -3412,7 +3525,7 @@ a:hover .imh_down img {
   .index_trip .container:after {
     width: 200px;
     height: 200px;
-    right: -40px;
+    right: -60px;
     top: -150px;
   }
   /*place_list*/

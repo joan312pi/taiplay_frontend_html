@@ -33,13 +33,14 @@
 
 		<!--right_icon_link start-->
 		<div class="right_icon_link">
-			<div class="dropdown">
-					<a href="#" class="dropdown-toggle no-arrow btn btn_add only_icon" data-bs-toggle="dropdown" aria-expanded="false" title="新增景點"></a>
-					<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="place_map.html" title="由地圖搜尋加入景點">地圖</a></li>
-							<li><a class="dropdown-item" href="#" title="由收藏清單加入景點" data-bs-toggle="modal" data-bs-target="#favoriteModal">收藏</a></li>
-					</ul>
+			<div class="dropdown dropup">
+				<a href="#" class="dropdown-toggle no-arrow btn btn_add only_icon" data-bs-toggle="dropdown" aria-expanded="false" title="新增景點"></a>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="place_map.html" title="由地圖搜尋加入景點">地圖</a></li>
+					<li><a class="dropdown-item" href="#" title="由收藏清單加入景點" data-bs-toggle="modal" data-bs-target="#favoriteModal">收藏</a></li>
+				</ul>
 			</div>
+			<a href="member_trip_detail_map.html" class="btn btn-light only_icon" title="地圖檢視行程"><i class="fa-solid fa-map-location-dot"></i></a>
 		</div>
 		<!--right_icon_link end-->
 
@@ -105,19 +106,21 @@
 						<div class="con">
 
 							<div class="top_btn_box">
-								<button class="btn btn-secondary only_icon" data-bs-toggle="modal" data-bs-target="#user_list_modal" title="編輯旅伴"><i class="fa-solid fa-user-pen"></i></button>
-								<button class="btn btn-secondary only_icon" data-bs-toggle="modal" data-bs-target="#trip_add_modal" title="編輯行程"><i class="fa-regular fa-pen-to-square"></i></button>
-								<button class="btn btn-danger only_icon" data-bs-toggle="modal" data-bs-target="#trip_delete_modal" title="刪除行程"><i class="fa-solid fa-trash-can"></i></button>
+								<button class="btn btn-secondary only_icon sr_right" data-bs-toggle="modal" data-bs-target="#user_list_modal" title="編輯旅伴"><i class="fa-solid fa-user-pen"></i></button>
+								<button class="btn btn-secondary only_icon sr_right" data-bs-toggle="modal" data-bs-target="#trip_add_modal" title="編輯行程"><i class="fa-regular fa-pen-to-square"></i></button>
+								<button class="btn btn-danger only_icon sr_right" data-bs-toggle="modal" data-bs-target="#trip_delete_modal" title="刪除行程"><i class="fa-solid fa-trash-can"></i></button>
 							</div>
 
-							<h3>台北兩日遊</h3>
+							<h3 class="sr_left">台北兩日遊</h3>
 
 							<!--tab menu start-->
-							<nav>
+							<nav class="sr_bottom">
 								<div class="nav nav-tabs" id="nav-tab" role="tablist">
 									<a class="nav-link active" id="tab_page_01" data-bs-toggle="tab" data-bs-target="#page_01" type="button" role="tab" aria-controls="page_01" aria-selected="true">總覽</a>
 									<a class="nav-link" id="tab_page_02" data-bs-toggle="tab" data-bs-target="#page_02" type="button" role="tab" aria-controls="page_02" aria-selected="false">第一天</a>
-									<a class="nav-link" id="tab_page_03" data-bs-toggle="tab" data-bs-target="#page_03" type="button" role="tab" aria-controls="page_03" aria-selected="false">第二天</a>
+									<a class="nav-link id="tab_page_03" data-bs-toggle="tab" data-bs-target="#page_03" type="button" role="tab" aria-controls="page_03" aria-selected="false">第二天</a>
+									<a href="#" class="only_icon" title="增加天數"><i class="fa-solid fa-plus"></i></a>
+									<a href="#" class="only_icon" title="刪除天數" data-bs-toggle="modal" data-bs-target="#trip_day_delete_modal"><i class="fa-solid fa-minus"></i></a>
 								</div>
 							</nav>
 							<!--tab menu end-->
@@ -126,69 +129,69 @@
 							<div class="tab-content" id="nav-tabContent">
 								<!--總覽 start-->
 								<div class="tab-pane fade show active" id="page_01" role="tabpanel" aria-labelledby="tab_page_01">
-										<div class="date"><i class="fa-regular fa-calendar"></i> 2026/10/06 ~ 2026/10/08</div>
-										<div class="users">
-											<img src="img/300x300.png" style="background: url(img/customer/member_pic.jpg);background-size: cover;background-position: center center;" title="王小明">
-											<img src="img/300x300.png" style="background: url(img/customer/member_01.svg);background-size: cover;background-position: center center;" title="張大毛">
-											<img src="img/300x300.png" style="background: url(img/customer/member_04.svg);background-size: cover;background-position: center center;" title="林小華">
-										</div>
-										<div class="row trip_overview">
+									<div class="date sr_bottom"><i class="fa-regular fa-calendar"></i> 2026/10/06 ~ 2026/10/08</div>
+									<div class="users sr_bottom">
+										<img src="img/300x300.png" style="background: url(img/customer/member_pic.jpg);background-size: cover;background-position: center center;" title="王小明">
+										<img src="img/300x300.png" style="background: url(img/customer/member_01.svg);background-size: cover;background-position: center center;" title="張大毛">
+										<img src="img/300x300.png" style="background: url(img/customer/member_04.svg);background-size: cover;background-position: center center;" title="林小華">
+									</div>
+									<div class="row trip_overview">
 
-											<div class="col-12 col-xl-6">
-												<div class="box">
-													<h4>行程筆記</h4>
-													<textarea class="form-control" rows="5"></textarea>
-													<div class="btn_box text-center">
-														<button class="btn btn-primary">儲存</button>
-													</div>
-												</div>
-											</div>
-
-											<div class="col-12 col-xl-6">
-												<div class="box">
-													<h4>記帳管理</h4>
-													<div class="top_btn_box">
-														<button class="btn btn_add only_icon" title="新增費用" data-bs-toggle="modal" data-bs-target="#expense_add_modal"></button>
-													</div>
-													<div class="expense_total">
-														<div class="total">累積支出<span class="amount">$ 4,850</span></div>
-														<div class="average">每人均分<span class="amount">$ 1,617</span></div>
-													</div>
-
-													<ul class="expense_list">
-														<li>
-															<a href="#" data-bs-toggle="modal" data-bs-target="#expense_add_modal">
-																<div class="font">
-																	<div class="title">台北101景歡台門票</div>
-																	<div class="note">王小明先付-3人均分</div>
-																</div>
-																<div class="amount">$ 1,800</div>
-															</a>
-														</li>
-														<li>
-															<a href="#" data-bs-toggle="modal" data-bs-target="#expense_add_modal">
-																<div class="font">
-																	<div class="title">台北101景歡台門票</div>
-																	<div class="note">王小明先付-3人均分</div>
-																</div>
-																<div class="amount">$ 1,800</div>
-															</a>
-														</li>
-													</ul>
-
-													<!-- <div class="btn_box text-center">
-														<button class="btn btn-primary" onclick="location.href='member_expense.html'">查看更多</button>
-													</div> -->
+										<div class="col-12 col-xl-6">
+											<div class="box">
+												<h4>行程筆記</h4>
+												<textarea class="form-control" rows="5"></textarea>
+												<div class="btn_box text-center">
+													<button class="btn btn-primary">儲存</button>
 												</div>
 											</div>
 										</div>
+
+										<div class="col-12 col-xl-6">
+											<div class="box">
+												<h4>記帳管理</h4>
+												<div class="top_btn_box">
+													<button class="btn btn_add only_icon" title="新增費用" data-bs-toggle="modal" data-bs-target="#expense_add_modal"></button>
+												</div>
+												<div class="expense_total">
+													<div class="total">累積支出<span class="amount">$ 4,850</span></div>
+													<div class="average">每人均分<span class="amount">$ 1,617</span></div>
+												</div>
+
+												<ul class="expense_list">
+													<li>
+														<a href="#" data-bs-toggle="modal" data-bs-target="#expense_add_modal">
+															<div class="font">
+																<div class="title">台北101景歡台門票</div>
+																<div class="note">王小明先付-3人均分</div>
+															</div>
+															<div class="amount">$ 1,800</div>
+														</a>
+													</li>
+													<li>
+														<a href="#" data-bs-toggle="modal" data-bs-target="#expense_add_modal">
+															<div class="font">
+																<div class="title">台北101景歡台門票</div>
+																<div class="note">王小明先付-3人均分</div>
+															</div>
+															<div class="amount">$ 1,800</div>
+														</a>
+													</li>
+												</ul>
+
+												<!-- <div class="btn_box text-center">
+													<button class="btn btn-primary" onclick="location.href='member_expense.html'">查看更多</button>
+												</div> -->
+											</div>
+										</div>
+									</div>
 								</div>
 								<!--總覽 end-->
 
 								<!--第一天 start-->
 								<div class="tab-pane fade" id="page_02" role="tabpanel" aria-labelledby="tab_page_02">
 									<div class="date"><i class="fa-regular fa-calendar"></i> 2026/10/06</div>
-									<ul class="memberTripList">
+									<ul class="member_trip_list">
 										<li data-id="1">
 											<div class="sort">01</div>
 											<img src="img/600x300.png" alt="" style="background-image: url(img/logo_400x300.jpg); background-position: center center; background-size: cover;">
@@ -378,315 +381,333 @@
 		<!--滾動效果 end-->
 
 		<!--svg檔換色 start-->
-    <script src="js/svg-inject.min.js"></script>
-    <!--svg檔換色 end-->
+		<script src="js/svg-inject.min.js"></script>
+		<!--svg檔換色 end-->
 
 		<!-- Modal start-->
 		<!--收藏 start-->
 		<!--加入收藏-->
 		<div class="modal fade" id="favoriteModal" tabindex="-1" aria-labelledby="favoriteModalLabel" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered">
-						<div class="modal-content">
-								<div class="modal-header">
-										<h5 class="modal-title" id="favoriteModalLabel">收藏清單</h5>
-										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="favoriteModalLabel">收藏清單</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<!-- <button class="btn btn_add float-end" data-bs-toggle="modal" data-bs-target="#favorite_add_modal">新增</button> -->
+						<div class="favorite_type">
+							<div class="item">
+								<div class="icon">
+									<div class="icon_bg">
+										<img src="img/customer/icon_07.svg">
+									</div>
 								</div>
-								<div class="modal-body">
-										<!-- <button class="btn btn_add float-end" data-bs-toggle="modal" data-bs-target="#favorite_add_modal">新增</button> -->
-										<div class="favorite_type">
-												<div class="item">
-														<div class="icon">
-																<div class="icon_bg">
-																		<img src="img/customer/icon_07.svg">
-																</div>
-														</div>
-														<div class="font">
-																<div class="title">口袋清單</div>
-																<div class="quantity">2 個景點</div>
-														</div>
-														<input type="radio" name="favorite_radio" checked>
-												</div>
-												<div class="item">
-														<div class="icon">
-																<div class="icon_bg">
-																		<img src="img/customer/icon_07.svg">
-																</div>
-														</div>
-														<div class="font">
-																<div class="title">北部景點</div>
-																<div class="quantity">2 個景點</div>
-														</div>
-														<input type="radio" name="favorite_radio">
-												</div>
-										</div>
-										
+								<div class="font">
+									<div class="title">口袋清單</div>
+									<div class="quantity">2 個景點</div>
 								</div>
-								<div class="modal-footer">
-										<button type="button" class="btn btn-cancel" data-bs-dismiss="modal">取消</button>
-										<button type="button" class="btn btn-primary" onclick="location.href='place_map_favorite.html'">確認送出</button>
+								<input type="radio" name="favorite_radio" checked>
+							</div>
+							<div class="item">
+								<div class="icon">
+									<div class="icon_bg">
+										<img src="img/customer/icon_07.svg">
+									</div>
 								</div>
+								<div class="font">
+									<div class="title">北部景點</div>
+									<div class="quantity">2 個景點</div>
+								</div>
+								<input type="radio" name="favorite_radio">
+							</div>
 						</div>
+							
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-cancel" data-bs-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary" onclick="location.href='place_map_favorite.html'">確認送出</button>
+					</div>
 				</div>
+			</div>
 		</div>
 
 		<!--新增收藏資料夾-->
 		<div class="modal fade" id="favorite_add_modal" tabindex="-1" aria-labelledby="favorite_add_label" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered">
-						<div class="modal-content">
-								<div class="modal-header">
-										<div class="modal-title">新增收藏資料夾</div>
-										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-								</div>
-								<div class="modal-body">
-										<input type="text" class="form-control">
-								</div>
-								<div class="modal-footer">
-										<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#favoriteModal">取消</button>
-										<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#favoriteModal">確認</button>
-								</div>
-						</div>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title">新增收藏資料夾</div>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<input type="text" class="form-control">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#favoriteModal">取消</button>
+						<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#favoriteModal">確認</button>
+					</div>
 				</div>
+			</div>
 		</div>
 		<!--收藏 end-->
 
 		<!--旅伴列表-->
 		<div class="modal fade" id="user_list_modal" tabindex="-1" aria-labelledby="user_list_label" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered">
-						<div class="modal-content">
-								<div class="modal-header">
-										<div class="modal-title">旅伴列表</div>
-										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-								</div>
-								<div class="modal-body">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title">旅伴列表</div>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
 
-										<div class="top_btn_box">
-												<button class="btn btn_add only_icon" title="新增旅伴" data-bs-toggle="modal" data-bs-target="#user_add_modal"></button>
-										</div>
-
-										<div class="user_list">
-												<div class="item">
-														<div class="img">
-																<img src="img/300x300.png" style="background: url(img/customer/member_pic.jpg);background-size: cover;background-position: center center;">
-														</div>
-														<div class="font">
-																<div class="title">王小明 <span class="tag">主揪</span></div>
-														</div>
-														<div class="edit">
-																<button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#user_edit_modal"><i class="fa-regular fa-pen-to-square"></i></button>
-														</div>
-												</div>
-												<div class="item">
-														<div class="img">
-																<img src="img/300x300.png" style="background: url(img/customer/member_pic.jpg);background-size: cover;background-position: center center;">
-														</div>
-														<div class="font">
-																<div class="title">王小明</div>
-														</div>
-														<div class="edit">
-																<button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#user_edit_modal"><i class="fa-regular fa-pen-to-square"></i></button>
-														</div>
-												</div>
-										</div>
-												
-								</div>
-								<div class="modal-footer">
-										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-										<button type="button" class="btn btn-primary" data-bs-dismiss="modal">確認</button>
-								</div>
+						<div class="top_btn_box">
+							<button class="btn btn_add only_icon" title="新增旅伴" data-bs-toggle="modal" data-bs-target="#user_add_modal"></button>
 						</div>
+
+						<div class="user_list">
+							<div class="item">
+								<div class="img">
+									<img src="img/300x300.png" style="background: url(img/customer/member_pic.jpg);background-size: cover;background-position: center center;">
+								</div>
+								<div class="font">
+									<div class="title">王小明 <span class="tag">主揪</span></div>
+								</div>
+								<div class="edit">
+									<button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#user_edit_modal"><i class="fa-regular fa-pen-to-square"></i></button>
+								</div>
+							</div>
+							<div class="item">
+								<div class="img">
+									<img src="img/300x300.png" style="background: url(img/customer/member_pic.jpg);background-size: cover;background-position: center center;">
+								</div>
+								<div class="font">
+									<div class="title">王小明</div>
+								</div>
+								<div class="edit">
+									<button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#user_edit_modal"><i class="fa-regular fa-pen-to-square"></i></button>
+								</div>
+							</div>
+						</div>
+									
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary" data-bs-dismiss="modal">確認</button>
+					</div>
 				</div>
+			</div>
 		</div>
 
 		<!--新增旅伴-->
 		<div class="modal fade" id="user_add_modal" tabindex="-1" aria-labelledby="userAdd_label" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered">
-						<div class="modal-content">
-								<div class="modal-header">
-										<div class="modal-title">新增旅伴</div>
-										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-								</div>
-								<div class="modal-body">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title">新增旅伴</div>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
 
-										<div class="row">
-												<div class="mb-3 col-12">
-														<label for="name" class="form-label required">姓名</label>
-														<input type="text" class="form-control" id="name" placeholder="請輸入姓名">
-												</div>
-												<div class="mb-3 col-12">
-														<label for="name" class="form-label required">代表圖</label>
-														<div class="users change">
-																<label class="form-check-label active">
-																				<input type="radio" name="member_img" checked><img src="img/customer/member_01.svg">
-																</label>
-																<label class="form-check-label">
-																				<input type="radio" name="member_img"><img src="img/customer/member_02.svg">
-																</label>
-																<label class="form-check-label">
-																				<input type="radio" name="member_img"><img src="img/customer/member_03.svg">
-																</label>
-																<label class="form-check-label">
-																				<input type="radio" name="member_img"><img src="img/customer/member_04.svg">
-																</label>
-																<label class="form-check-label">
-																				<input type="radio" name="member_img"><img src="img/customer/member_05.svg">
-																</label>
-																<label class="form-check-label">
-																				<input type="radio" name="member_img"><img src="img/customer/member_06.svg">
-																</label>
-																<label class="form-check-label">
-																				<input type="radio" name="member_img"><img src="img/customer/member_07.svg">
-																</label>
-																<label class="form-check-label">
-																				<input type="radio" name="member_img"><img src="img/customer/member_08.svg">
-																</label>
-														</div>
-												</div>
-										</div>
-										
+						<div class="row">
+							<div class="mb-3 col-12">
+								<label for="name" class="form-label required">姓名</label>
+								<input type="text" class="form-control" id="name" placeholder="請輸入姓名">
+							</div>
+							<div class="mb-3 col-12">
+								<label for="name" class="form-label required">代表圖</label>
+								<div class="users change">
+									<label class="form-check-label active">
+										<input type="radio" name="member_img" checked><img src="img/customer/member_01.svg">
+									</label>
+									<label class="form-check-label">
+										<input type="radio" name="member_img"><img src="img/customer/member_02.svg">
+									</label>
+									<label class="form-check-label">
+										<input type="radio" name="member_img"><img src="img/customer/member_03.svg">
+									</label>
+									<label class="form-check-label">
+										<input type="radio" name="member_img"><img src="img/customer/member_04.svg">
+									</label>
+									<label class="form-check-label">
+										<input type="radio" name="member_img"><img src="img/customer/member_05.svg">
+									</label>
+									<label class="form-check-label">
+										<input type="radio" name="member_img"><img src="img/customer/member_06.svg">
+									</label>
+									<label class="form-check-label">
+										<input type="radio" name="member_img"><img src="img/customer/member_07.svg">
+									</label>
+									<label class="form-check-label">
+										<input type="radio" name="member_img"><img src="img/customer/member_08.svg">
+									</label>
 								</div>
-								<div class="modal-footer">
-										<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#user_list_modal">取消</button>
-										<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#user_list_modal">確認</button>
-								</div>
+							</div>
 						</div>
+							
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#user_list_modal">取消</button>
+						<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#user_list_modal">確認</button>
+					</div>
 				</div>
+			</div>
 		</div>
 
 		<!--編輯旅伴-->
 		<div class="modal fade" id="user_edit_modal" tabindex="-1" aria-labelledby="user_edit_label" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered">
-						<div class="modal-content">
-								<div class="modal-header">
-										<div class="modal-title">編輯旅伴</div>
-										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-								</div>
-								<div class="modal-body">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title">編輯旅伴</div>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
 
-										<div class="row">
-												<div class="mb-3 col-12">
-														<label for="name" class="form-label required">姓名</label>
-														<input type="text" class="form-control" id="name" placeholder="請輸入姓名" value="王小明">
-												</div>
-												<div class="mb-3 col-12">
-														<label for="name" class="form-label required">代表圖</label>
-														<div class="users change">
-																<label class="form-check-label">
-																				<input type="radio" name="member_img"><img src="img/customer/member_01.svg">
-																</label>
-																<label class="form-check-label active">
-																				<input type="radio" name="member_img" checked><img src="img/customer/member_02.svg">
-																</label>
-																<label class="form-check-label">
-																				<input type="radio" name="member_img"><img src="img/customer/member_03.svg">
-																</label>
-																<label class="form-check-label">
-																				<input type="radio" name="member_img"><img src="img/customer/member_04.svg">
-																</label>
-																<label class="form-check-label">
-																				<input type="radio" name="member_img"><img src="img/customer/member_05.svg">
-																</label>
-																<label class="form-check-label">
-																				<input type="radio" name="member_img"><img src="img/customer/member_06.svg">
-																</label>
-																<label class="form-check-label">
-																				<input type="radio" name="member_img"><img src="img/customer/member_07.svg">
-																</label>
-																<label class="form-check-label">
-																				<input type="radio" name="member_img"><img src="img/customer/member_08.svg">
-																</label>
-														</div>
-												</div>
-										</div>
-										
+						<div class="row">
+							<div class="mb-3 col-12">
+								<label for="name" class="form-label required">姓名</label>
+								<input type="text" class="form-control" id="name" placeholder="請輸入姓名" value="王小明">
+							</div>
+							<div class="mb-3 col-12">
+								<label for="name" class="form-label required">代表圖</label>
+								<div class="users change">
+									<label class="form-check-label">
+										<input type="radio" name="member_img"><img src="img/customer/member_01.svg">
+									</label>
+									<label class="form-check-label active">
+													<input type="radio" name="member_img" checked><img src="img/customer/member_02.svg">
+									</label>
+									<label class="form-check-label">
+										<input type="radio" name="member_img"><img src="img/customer/member_03.svg">
+									</label>
+									<label class="form-check-label">
+										<input type="radio" name="member_img"><img src="img/customer/member_04.svg">
+									</label>
+									<label class="form-check-label">
+										<input type="radio" name="member_img"><img src="img/customer/member_05.svg">
+									</label>
+									<label class="form-check-label">
+										<input type="radio" name="member_img"><img src="img/customer/member_06.svg">
+									</label>
+									<label class="form-check-label">
+										<input type="radio" name="member_img"><img src="img/customer/member_07.svg">
+									</label>
+									<label class="form-check-label">
+										<input type="radio" name="member_img"><img src="img/customer/member_08.svg">
+									</label>
 								</div>
-								<div class="modal-footer">
-										<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#user_list_modal">刪除</button>
-										<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#user_list_modal">取消</button>
-										<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#user_list_modal">確認</button>
-								</div>
+							</div>
 						</div>
+							
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#user_list_modal">刪除</button>
+						<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#user_list_modal">取消</button>
+						<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#user_list_modal">確認</button>
+					</div>
 				</div>
+			</div>
 		</div>
 
 		<!--編輯行程-->
 		<div class="modal fade" id="trip_add_modal" tabindex="-1" aria-labelledby="add_label" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered">
-						<div class="modal-content">
-								<div class="modal-header">
-										<div class="modal-title">編輯行程</div>
-										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title">編輯行程</div>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="mb-3 col-12">
+								<label for="photo" class="form-label col-12">封面照片</label>
+								<div class="form_flie_img text-center">
+									<div class="box">
+										<img id="coverPreview" src="img/logo_400x300.jpg" alt="封面照片">
+										<button type="button" class="btn btn_file" id="changeBtn">更換</button>
+										<input type="file" id="photoInput" accept="image/*" style="display: none;">
+									</div>
 								</div>
-								<div class="modal-body">
-										<div class="row">
-												<div class="mb-3 col-12">
-														<label for="photo" class="form-label col-12">封面照片</label>
-														<div class="form_flie_img text-center">
-																<div class="box">
-																		<img id="coverPreview" src="img/logo_400x300.jpg" alt="封面照片">
-																		<button type="button" class="btn btn_file" id="changeBtn">更換</button>
-																		<input type="file" id="photoInput" accept="image/*" style="display: none;">
-																</div>
-														</div>
-												</div>
+							</div>
 
-												<div class="mb-3 col-12">
-														<label for="name" class="form-label required">行程名稱</label>
-														<input type="text" class="form-control" id="name" placeholder="請輸入行程名稱" value="台北兩日遊">
-														<!-- <div id="nameHelp" class="finvalid-feedback">請輸入行程名稱</div> -->
-												</div>
+							<div class="mb-3 col-12">
+								<label for="name" class="form-label required">行程名稱</label>
+								<input type="text" class="form-control" id="name" placeholder="請輸入行程名稱" value="台北兩日遊">
+								<!-- <div id="nameHelp" class="finvalid-feedback">請輸入行程名稱</div> -->
+							</div>										 -->
+							
+							<div class="mb-3 col-12">
+								<label for="date" class="form-label col-12 required">行程日期</label>
+								
+								<label class="form-check-label">
+									<input type="radio" name="toggle_item_02" data-toggle="toggle_01" onclick="toggleChoice('toggle_item_02')" checked="">單日
+								</label>
 
-												<!-- <div class="mb-3 col-12">
-														<label for="name" class="form-label">行程描述</label>
-														<textarea class="form-control" rows="3">內容文案、內容文案、內容文案、內容文案、內容文案、內容文案、內容文案、內容文案、內容文案、內容文案、內容文案、內容文案、內容文案</textarea>
-												</div>											 -->
-												
-												<div class="mb-3 col-12">
-														<label for="date" class="form-label col-12 required">行程日期</label>
-														
-														<label class="form-check-label">
-																<input type="radio" name="toggle_item_02" data-toggle="toggle_01" onclick="toggleChoice('toggle_item_02')" checked="">單日
-														</label>
+								<label class="form-check-label">
+									<input type="radio" name="toggle_item_02" data-toggle="toggle_02" onclick="toggleChoice('toggle_item_02');">區間
+								</label>
 
-														<label class="form-check-label">
-																<input type="radio" name="toggle_item_02" data-toggle="toggle_02" onclick="toggleChoice('toggle_item_02');">區間
-														</label>
-
-														<div class="toggle_01">
-																<input type="date" class="form-control input-small" id="date">
-														</div>
-
-														<div class="toggle_02" style="display: none;">
-																<input type="date" class="form-control input-small d-inline-block"> ~ <input type="date" class="form-control input-small d-inline-block" id="date">
-														</div>
-														<!-- <div id="dateHelp" class="finvalid-feedback">請輸入行程日期</div> -->
-												</div>
-										</div>
+								<div class="toggle_01">
+									<input type="date" class="form-control input-small" id="date">
 								</div>
-								<div class="modal-footer">
-										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-										<button type="button" class="btn btn-primary" data-bs-dismiss="modal">確認</button>
+
+								<div class="toggle_02" style="display: none;">
+									<input type="date" class="form-control input-small d-inline-block"> ~ <input type="date" class="form-control input-small d-inline-block" id="date">
 								</div>
+								<!-- <div id="dateHelp" class="finvalid-feedback">請輸入行程日期</div> -->
+							</div>
 						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary" data-bs-dismiss="modal">確認</button>
+					</div>
 				</div>
+			</div>
 		</div>
 
 		<!--刪除行程-->
 		<div class="modal fade" id="trip_delete_modal" tabindex="-1" aria-labelledby="trip_delete_label" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered">
-						<div class="modal-content">
-								<div class="modal-header">
-												<div class="modal-title">刪除行程</div>
-												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-								</div>
-								<div class="modal-body">
-										確認刪除行程「台北兩日遊」嗎？
-								</div>
-								<div class="modal-footer">
-												<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-												<button type="button" class="btn btn-primary" data-bs-dismiss="modal">確認</button>
-								</div>
-						</div>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title">刪除行程</div>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						確認刪除行程「台北兩日遊」嗎？
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary" data-bs-dismiss="modal">確認</button>
+					</div>
 				</div>
+			</div>
+		</div>
+
+		
+		<!--刪除行程天數-->
+		<div class="modal fade" id="trip_day_delete_modal" tabindex="-1" aria-labelledby="trip_day_delete_label" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title">刪除第幾天</div>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<select class="form-select">
+							<option>第一天</option>
+							<option>第二天</option>
+						</select>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary" data-bs-dismiss="modal">確認</button>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<!--編輯費用-->
@@ -912,218 +933,218 @@
 
 		<!--刪除地點-->
 		<div class="modal fade" id="place_delete_modal" tabindex="-1" aria-labelledby="place_delete_label" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered">
-						<div class="modal-content">
-								<div class="modal-header">
-										<div class="modal-title">刪除行程地點</div>
-										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-								</div>
-								<div class="modal-body">
-										確認刪除「台北101」嗎？
-								</div>
-								<div class="modal-footer">
-										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-										<button type="button" class="btn btn-primary" data-bs-dismiss="modal">確認</button>
-								</div>
-						</div>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title">刪除行程地點</div>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						確認刪除「台北101」嗎？
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary" data-bs-dismiss="modal">確認</button>
+					</div>
 				</div>
+			</div>
 		</div>
 
 		<!--編輯交通工具-->
 		<div class="modal fade" id="traffic_modal" tabindex="-1" aria-labelledby="traffic_label" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered">
-						<div class="modal-content">
-								<div class="modal-header">
-										<div class="modal-title">編輯交通工具</div>
-										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-								</div>
-								<div class="modal-body">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title">編輯交通工具</div>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
 
-										<div class="traffic_place_box">
-												<div class="start">台北101</div>
-												<div class="arrow"><i class="fa-solid fa-right-long"></i></div>
-												<div class="end">國父紀念館</div>
-										</div>
-
-										<div class="expense_type">
-												<label class="form-check-label">
-														<input type="radio" name="expense_type"><img src="img/customer/transportation_01.svg" class="svg-img" onload="SVGInject(this)"><span class="title">自定議</span>
-												</label>
-												<label class="form-check-label active">
-														<input type="radio" name="expense_type" checked><img src="img/customer/transportation_02.svg" class="svg-img" onload="SVGInject(this)"><span class="title">汽車</span>
-												</label>
-												<label class="form-check-label">
-														<input type="radio" name="expense_type"><img src="img/customer/transportation_03.svg" class="svg-img" onload="SVGInject(this)"><span class="title">機車</span>
-												</label>
-												<label class="form-check-label">
-														<input type="radio" name="expense_type"><img src="img/customer/transportation_04.svg" class="svg-img" onload="SVGInject(this)"><span class="title">大眾運輸</span>
-												</label>
-												<label class="form-check-label">
-														<input type="radio" name="expense_type"><img src="img/customer/transportation_05.svg" class="svg-img" onload="SVGInject(this)"><span class="title">走路</span>
-												</label>
-										</div>
-
-										<div class="traffic_list">
-												<div class="item active">
-														<div class="img"><img src="img/customer/transportation_02.svg"></div>
-														<div class="title">30 分鐘</div>
-														<div class="font">14.7 公里</div>
-												</div>
-												<div class="item">
-														<div class="img"><img src="img/customer/transportation_02.svg"></div>
-														<div class="title">31 分鐘</div>
-														<div class="font">16.4 公里</div>
-												</div>
-										</div>
-
-								</div>
-								<div class="modal-footer">
-										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-										<button type="button" class="btn btn-primary" data-bs-dismiss="modal">確認</button>
-								</div>
+						<div class="traffic_place_box">
+							<div class="start">台北101</div>
+							<div class="arrow"><i class="fa-solid fa-right-long"></i></div>
+							<div class="end">國父紀念館</div>
 						</div>
+
+						<div class="traffic_type">
+							<label class="form-check-label">
+								<input type="radio" name="traffic_type"><img src="img/customer/transportation_01.svg" class="svg-img" onload="SVGInject(this)"><span class="title">自定議</span>
+							</label>
+							<label class="form-check-label active">
+								<input type="radio" name="traffic_type" checked><img src="img/customer/transportation_02.svg" class="svg-img" onload="SVGInject(this)"><span class="title">汽車</span>
+							</label>
+							<label class="form-check-label">
+								<input type="radio" name="traffic_type"><img src="img/customer/transportation_03.svg" class="svg-img" onload="SVGInject(this)"><span class="title">機車</span>
+							</label>
+							<label class="form-check-label">
+								<input type="radio" name="traffic_type"><img src="img/customer/transportation_04.svg" class="svg-img" onload="SVGInject(this)"><span class="title">大眾運輸</span>
+							</label>
+							<label class="form-check-label">
+								<input type="radio" name="traffic_type"><img src="img/customer/transportation_05.svg" class="svg-img" onload="SVGInject(this)"><span class="title">走路</span>
+							</label>
+						</div>
+
+						<div class="traffic_list">
+							<div class="item active">
+								<div class="img"><img src="img/customer/transportation_02.svg"></div>
+								<div class="title">30 分鐘</div>
+								<div class="font">14.7 公里</div>
+							</div>
+							<div class="item">
+								<div class="img"><img src="img/customer/transportation_02.svg"></div>
+								<div class="title">31 分鐘</div>
+								<div class="font">16.4 公里</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary" data-bs-dismiss="modal">確認</button>
+					</div>
 				</div>
+			</div>
 		</div>
 		<!-- Modal end-->
 
 		<script>
-			// 更換圖片
-			// 取得相關 HTML 元素
-			const changeBtn = document.getElementById('changeBtn');
-			const photoInput = document.getElementById('photoInput');
-			const coverPreview = document.getElementById('coverPreview');
+		// 更換圖片
+		// 取得相關 HTML 元素
+		const changeBtn = document.getElementById('changeBtn');
+		const photoInput = document.getElementById('photoInput');
+		const coverPreview = document.getElementById('coverPreview');
 
-			// 1. 點擊「更換」按鈕時，觸發隱藏的 file input
-			changeBtn.addEventListener('click', () => {
-				photoInput.click();
+		// 1. 點擊「更換」按鈕時，觸發隱藏的 file input
+		changeBtn.addEventListener('click', () => {
+			photoInput.click();
+		});
+
+		// 2. 當選擇了新檔案時，即時讀取並更換圖片預覽
+		photoInput.addEventListener('change', (e) => {
+			const file = e.target.files[0];
+			if (file) {
+				// 建立臨時的 URL 供 <img> 標籤預覽
+				const imageURL = URL.createObjectURL(file);
+				coverPreview.src = imageURL;
+
+				// 可選：釋放記憶體（當圖片載入完成後）
+				coverPreview.onload = () => {
+					URL.revokeObjectURL(imageURL);
+				};
+			}
+		});
+
+
+		// 旅伴icon選取
+		// 監聽整個網頁中所有 .users.change 區塊的點擊事件
+		document.addEventListener('click', function(e) {
+			const changeContainer = e.target.closest('.users.change');
+			if (!changeContainer) return;
+
+			// 找到被點擊的 label
+			const label = e.target.closest('.form-check-label');
+			if (!label) return;
+
+			// 1. 移除該群組內所有 label 的 active 樣式
+			changeContainer.querySelectorAll('.form-check-label').forEach(item => {
+				item.classList.remove('active');
 			});
 
-			// 2. 當選擇了新檔案時，即時讀取並更換圖片預覽
-			photoInput.addEventListener('change', (e) => {
-				const file = e.target.files[0];
-				if (file) {
-					// 建立臨時的 URL 供 <img> 標籤預覽
-					const imageURL = URL.createObjectURL(file);
-					coverPreview.src = imageURL;
+			// 2. 當前點擊的 label 加上 active 樣式
+			label.classList.add('active');
 
-					// 可選：釋放記憶體（當圖片載入完成後）
-					coverPreview.onload = () => {
-						URL.revokeObjectURL(imageURL);
-					};
-				}
+			// 3. 觸發內部 radio 的點擊，確保 checked 生效
+			const radio = label.querySelector('input[type="radio"]');
+			if (radio && !radio.checked) {
+				radio.checked = true; // 直接賦值或用 radio.click() 都可以
+			}
+		});
+
+
+		// 費用類別選取
+		document.querySelector('.expense_type').addEventListener('click', function(e) {
+			// 找到被點擊的 label
+			const label = e.target.closest('.form-check-label');
+			if (!label) return;
+
+			// 1. 移除所有 label 的 active
+			this.querySelectorAll('.form-check-label').forEach(item => {
+				item.classList.remove('active');
 			});
 
+			// 2. 當前點擊的 label 加上 active
+			label.classList.add('active');
 
-			// 旅伴icon選取
-			// 監聽整個網頁中所有 .users.change 區塊的點擊事件
-			document.addEventListener('click', function(e) {
-					const changeContainer = e.target.closest('.users.change');
-					if (!changeContainer) return;
-
-					// 找到被點擊的 label
-					const label = e.target.closest('.form-check-label');
-					if (!label) return;
-
-					// 1. 移除該群組內所有 label 的 active 樣式
-					changeContainer.querySelectorAll('.form-check-label').forEach(item => {
-							item.classList.remove('active');
-					});
-
-					// 2. 當前點擊的 label 加上 active 樣式
-					label.classList.add('active');
-
-					// 3. 觸發內部 radio 的點擊，確保 checked 生效
-					const radio = label.querySelector('input[type="radio"]');
-					if (radio && !radio.checked) {
-							radio.checked = true; // 直接賦值或用 radio.click() 都可以
-					}
-			});
+			// 3. 取得內部的 radio 並直接觸發點擊，確保 checked 生效
+			const radio = label.querySelector('input[type="radio"]');
+			if (radio && !radio.checked) {
+				radio.click(); // 用 click() 取代直接改 .checked 屬性
+			}
+		});
 
 
-			// 費用類別選取
-			document.querySelector('.expense_type').addEventListener('click', function(e) {
-				// 找到被點擊的 label
-				const label = e.target.closest('.form-check-label');
-				if (!label) return;
-
-				// 1. 移除所有 label 的 active
-				this.querySelectorAll('.form-check-label').forEach(item => {
-						item.classList.remove('active');
-				});
-
-				// 2. 當前點擊的 label 加上 active
-				label.classList.add('active');
-
-				// 3. 取得內部的 radio 並直接觸發點擊，確保 checked 生效
-				const radio = label.querySelector('input[type="radio"]');
-				if (radio && !radio.checked) {
-						radio.click(); // 用 click() 取代直接改 .checked 屬性
-				}
-			});
+		// 跨天移動-選取第幾天
+		document.querySelector('.trip_day_list').addEventListener('click', function(e) {
+			// 尋找被點擊的目標或其祖先元素中的 .item
+			const clickedItem = e.target.closest('.item');
+			
+			// 如果沒有點到 .item 就不動作
+			if (!clickedItem) return;
+			
+			// 1. 移除所有 .item 的 active
+			const items = this.querySelectorAll('.item');
+			items.forEach(item => item.classList.remove('active'));
+			
+			// 2. 將被點擊的 item 加上 active
+			clickedItem.classList.add('active');
+		});
 
 
-			// 跨天移動-選取第幾天
-			document.querySelector('.trip_day_list').addEventListener('click', function(e) {
-				// 尋找被點擊的目標或其祖先元素中的 .item
-				const clickedItem = e.target.closest('.item');
-				
-				// 如果沒有點到 .item 就不動作
-				if (!clickedItem) return;
-				
-				// 1. 移除所有 .item 的 active
-				const items = this.querySelectorAll('.item');
-				items.forEach(item => item.classList.remove('active'));
-				
-				// 2. 將被點擊的 item 加上 active
-				clickedItem.classList.add('active');
-			});
-
-
-			// 交通工具選擇
-			document.querySelector('.traffic_list').addEventListener('click', function(e) {
-				// 尋找被點擊的目標或其祖先元素中的 .item
-				const clickedItem = e.target.closest('.item');
-				
-				// 如果沒有點到 .item 就不動作
-				if (!clickedItem) return;
-				
-				// 1. 移除所有 .item 的 active
-				const items = this.querySelectorAll('.item');
-				items.forEach(item => item.classList.remove('active'));
-				
-				// 2. 將被點擊的 item 加上 active
-				clickedItem.classList.add('active');
-				});
+		// 交通工具選擇
+		document.querySelector('.traffic_type').addEventListener('click', function(e) {
+			// 尋找被點擊的目標或其祖先元素中的 .form-check-label
+			const clickedItem = e.target.closest('.form-check-label');
+			
+			// 如果沒有點到 .item 就不動作
+			if (!clickedItem) return;
+			
+			// 1. 移除所有 .item 的 active
+			const items = this.querySelectorAll('.form-check-label');
+			items.forEach(item => item.classList.remove('active'));
+			
+			// 2. 將被點擊的 item 加上 active
+			clickedItem.classList.add('active');
+		});
 			
 		</script>
 
- 		<!--選單拖曳效果 start-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js"></script>
+		<!--選單拖曳效果 start-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js"></script>
 		<script>
-			// 1. 抓取頁面上所有帶有 .memberTripList 的元素
-			const sortableElements = document.querySelectorAll('.memberTripList');
+		// 1. 抓取頁面上所有帶有 .member_trip_list 的元素
+		const sortableElements = document.querySelectorAll('.member_trip_list');
 
-			// 2. 使用 forEach 迴圈為每一組清單獨立建立 Sortable 實例
-			sortableElements.forEach((el) => {
-				// 為單一容器初始化 Sortable
-				const instance = Sortable.create(el, {
-					animation: 150, // 動畫毫秒數
-					ghostClass: 'sortable-ghost', // 拖曳時產生的半透明樣式
-					
-					// 當該組清單內的順序被改變時觸發
-					onEnd: function (evt) {
-						const groupName = el.getAttribute('data-group-name');
-						console.log(`[${groupName}] 排序已變更！`);
-						console.log('舊位置：', evt.oldIndex, ' ➔ 新位置：', evt.newIndex);
+		// 2. 使用 forEach 迴圈為每一組清單獨立建立 Sortable 實例
+		sortableElements.forEach((el) => {
+			// 為單一容器初始化 Sortable
+			const instance = Sortable.create(el, {
+				animation: 150, // 動畫毫秒數
+				ghostClass: 'sortable-ghost', // 拖曳時產生的半透明樣式
+				
+				// 當該組清單內的順序被改變時觸發
+				onEnd: function (evt) {
+					const groupName = el.getAttribute('data-group-name');
+					console.log(`[${groupName}] 排序已變更！`);
+					console.log('舊位置：', evt.oldIndex, ' ➔ 新位置：', evt.newIndex);
 
-						// 取得該組目前最新的 data-id 順序
-						const updatedOrder = instance.toArray();
-						console.log(`[${groupName}] 最新順序：`, updatedOrder);
-					}
-				});
+					// 取得該組目前最新的 data-id 順序
+					const updatedOrder = instance.toArray();
+					console.log(`[${groupName}] 最新順序：`, updatedOrder);
+				}
 			});
-  	</script>
-    <!--選單拖曳效果 end-->
+		});
+		</script>
+		<!--選單拖曳效果 end-->
 
 		
 	</body>
