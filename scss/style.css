@@ -1971,9 +1971,15 @@ label[for=page_select] select {
 .map_search .search_icon {
   position: absolute;
   right: 15px;
-  top: 17px;
+  top: 14px;
   border: none;
   background: transparent;
+}
+.map_search .search_icon i {
+  color: #22a5a8;
+}
+.map_search .search_icon:hover i, .map_search .search_icon:focus i {
+  color: #0c7678;
 }
 
 /*map_bottom*/

@@ -90,62 +90,70 @@
 
 						</div>
 						<div class="con">
-							<form>
+							<form id="memberForm">
 								<div class="row">
+									<!-- 姓名 -->
 									<div class="mb-3 col-12 col-md-6 sr_bottom">
 										<label for="username" class="form-label required">姓名</label>
-										<input type="text" class="form-control" id="username" placeholder="請輸入姓名">
-										<!-- <div id="usernameHelp" class="finvalid-feedback">請輸入姓名</div> -->
+										<!-- 加上 data-masked 與 data-original 屬性供切換用 -->
+										<input type="text" class="form-control maskable-field" id="username" placeholder="請輸入姓名" value="王○明" data-masked="王○明" data-original="王小明" readonly>
 									</div>
 
+									<!-- 電子信箱 -->
 									<div class="mb-3 col-12 col-md-6 sr_bottom">
 										<label for="email" class="form-label required">電子信箱</label>
-										<input type="email" class="form-control" id="email" placeholder="請輸入電子信箱">
-										<!-- <div id="emailHelp" class="finvalid-feedback">請輸入電子信箱</div> -->
+										<input type="email" class="form-control maskable-field" id="email" placeholder="請輸入電子信箱" value="abc***@gmail.com" data-masked="abc***@gmail.com" data-original="abc1234@gmail.com" readonly>
 									</div>
 									
+									<!-- 手機號碼 -->
 									<div class="mb-3 col-12 col-md-6 sr_bottom">
 										<label for="phone" class="form-label">手機號碼</label>
-										<input type="text" class="form-control" id="phone" placeholder="請輸入手機號碼">
+										<input type="text" class="form-control maskable-field" id="phone" placeholder="請輸入手機號碼" value="0912***567" data-masked="0912***567" data-original="0912345567" readonly>
 									</div>
 
+									<!-- 性別 -->
 									<div class="mb-3 col-12 col-md-6 sr_bottom">
-										<label for="gender" class="form-label">姓別</label><br>
-										<label class="form-check-label">
-											<input type="radio" name="gender" value="1" checked>男
-										</label>
-										<label class="form-check-label">
-											<input type="radio" name="gender" value="2">女
-										</label>
-										<label class="form-check-label">
-											<input type="radio" name="gender" value="3">不透露
-										</label>
+										<label for="gender" class="form-label">性別</label><br>
+										<div id="genderGroup">
+											<label class="form-check-label me-3">
+												<input type="radio" name="gender" value="1" checked disabled>男
+											</label>
+											<label class="form-check-label me-3">
+												<input type="radio" name="gender" value="2" disabled>女
+											</label>
+											<label class="form-check-label">
+												<input type="radio" name="gender" value="3" disabled>不透露
+											</label>
+										</div>
 									</div>
 
+									<!-- 生日 -->
 									<div class="mb-3 col-12 col-md-6 sr_bottom">
 										<label for="birthday" class="form-label">生日</label>
-										<input type="date" class="form-control" id="birthday">
+										<input type="date" class="form-control maskable-field" id="birthday" value="1990-01-01" data-masked="1990-01-01" data-original="1990-05-20" readonly>
 									</div>
 									
+									<!-- 學歷 -->
 									<div class="mb-3 col-12 col-md-4 sr_bottom">
 										<label for="educational" class="form-label">學歷</label>
-										<select class="w-auto form-select" id="educational">
-											<option value="" disabled selected hidden>請選擇</option>
-											<option value="1" selected>國小</option>
+										<select class="w-auto form-select" id="educational" disabled>
+											<option value="" disabled hidden>請選擇</option>
+											<option value="1">國小</option>
 											<option value="2">國中</option>
 											<option value="3">高中/高職</option>
 											<option value="4">專科</option>
-											<option value="5">大學</option>
+											<option value="5" selected>大學</option>
 											<option value="6">碩士</option>
 											<option value="7">博士</option>
 											<option value="8">其他</option>
 										</select>
 									</div>
 
+									<!-- 居住縣市 -->
 									<div class="mb-3 col-6 col-md-3 sr_bottom">
-										<label for="gender" class="form-label">居住縣市</label>
-										<select class="form-select" id="gender">
-											<option value="" disabled selected hidden>請選擇</option>
+										<label for="city" class="form-label">居住縣市</label>
+										<select class="form-select" id="city" disabled>
+											<option value="" disabled hidden>請選擇</option>
 											<option value="1" selected>臺北市</option>
 											<option value="2">新北市</option>
 											<option value="3">桃園市</option>
@@ -157,33 +165,37 @@
 										</select>
 									</div>
 
+									<!-- 地址 -->
 									<div class="mb-3 col-12 col-md-9 sr_bottom">
-										<label for="phone" class="form-label">地址</label>
-										<input type="text" class="form-control" id="phone" placeholder="請輸入地址">
+										<label for="address" class="form-label">地址</label>
+										<input type="text" class="form-control maskable-field" id="address" placeholder="請輸入地址" value="台北市信義區***路*" data-masked="台北市信義區***路*" data-original="台北市信義區基隆路一段" readonly>
 									</div>
 
+									<!-- 代表圖 -->
 									<div class="mb-3 col-12 sr_bottom">
-										<label for="phone" class="form-label">代表圖</label>
-										<input type="file" class="form-control" id="phone" placeholder="請輸入手機號碼">
+										<label for="avatar" class="form-label">代表圖</label>
+										<input type="file" class="form-control edit-hidden-item" id="avatar" style="display: none;">
 										<div class="finvalid-feedback">建議尺寸 200*200 px</div>
 									</div>
 
-									<div class="verification_code mb-3 col-12 sr_bottom">
+									<!-- 驗證碼 (編輯時才顯示) -->
+									<div class="verification_code mb-3 col-12 sr_bottom edit-hidden-item" style="display: none;">
 										<label for="verification" class="form-label">驗證碼</label><br>
-										<input type="text" id="verification" placeholder="請輸入驗證碼" class="form-control d-inline" />
+										<input type="text" id="verification" placeholder="請輸入驗證碼" class="form-control d-inline w-auto" />
 										<img id="CaptchaImage" src="img/Pic_Check01.gif" alt="驗證碼" style="height: 36px !important;vertical-align: top;">
 										<a href="#" class="code_btn d-inline-block p-2" title="驗證碼重新整理">
 											<i class="fa fa-refresh" aria-hidden="true"></i>
 											<span class="sr-only">驗證碼重新整理</span>
 										</a>
-										<!-- <div id="verificationHelp" class="finvalid-feedback">請輸入驗證碼</div> -->
 									</div>
 								</div>
 
+								<!-- 按鈕區 -->
 								<div class="btn_box text-center sr_bottom">
-									<button type="button" class="btn btn_01" data-bs-toggle="modal" data-bs-target="#ok_modal">儲存</button>
+									<button type="button" class="btn btn_01" id="btnEditMode">檢視修改</button>
+									<button type="submit" class="btn btn_01" id="btnSave" style="display: none;">儲存</button>
+									<button type="button" class="btn btn-secondary" id="btnCancel" style="display: none;">取消</button>
 								</div>
-
 							</form>
 						</div>
 					</div>
@@ -211,6 +223,30 @@
 		<!--滾動效果 end-->
 
 		<!-- Modal start-->
+		<!-- 密碼確認-->
+		<div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="passwordModalLabel">身分驗證</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="mb-3">
+							<label for="checkPassword" class="form-label">請輸入會員密碼以檢視/修改完整資料：</label>
+							<input type="password" class="form-control" id="checkPassword" placeholder="請輸入密碼(預設123456)">
+							<div id="passwordError" class="finvalid-feedback">密碼錯誤，請重新輸入</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary" id="btnSubmitPassword">確認</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--修改資料-->
 		<div class="modal fade" id="ok_modal" tabindex="-1" aria-labelledby="ok_label" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
 				<div class="modal-content">
@@ -228,6 +264,114 @@
 			</div>
 		</div>
 		<!-- Modal end-->
+
+		<script>
+			let inactivityTimer = null;
+			const TIMEOUT_DURATION = 5 * 60 * 1000; // 5分鐘 (毫秒)
+
+			// 1. 點擊「檢視修改」時，開啟密碼驗證 Modal
+			$('#btnEditMode').on('click', function() {
+				$('#checkPassword').val('');
+				$('#passwordError').hide();
+				var myModal = new bootstrap.Modal(document.getElementById('passwordModal'));
+				myModal.show();
+			});
+
+			// 2. 密碼確認送出
+			$('#btnSubmitPassword').on('click', function() {
+				const pwd = $('#checkPassword').val();
+				
+				// 模擬密碼驗證 (實際專案應透過 AJAX 傳送至後端驗證)
+				if (pwd === "123456") { // 假設正確密碼為 "123456"
+					// 關閉 Modal
+					var modalEl = document.getElementById('passwordModal');
+					var modal = bootstrap.Modal.getInstance(modalEl);
+					modal.hide();
+					
+					// 解除隱碼，顯示真實資料與編輯狀態
+					enableEditableMode();
+					
+					// 啟動 5 分鐘計時器
+					resetInactivityTimer();
+					
+				} else {
+					$('#passwordError').show();
+				}
+			});
+
+			// 3. 切換為「編輯/完整檢視」狀態
+			function enableEditableMode() {
+				// 將欄位值切換為完整原資料 (data-original)
+				$('.maskable-field').each(function() {
+					$(this).val($(this).attr('data-original'));
+					$(this).prop('readonly', false);
+				});
+				
+				// 開放其他表單元件操作
+				$('#educational, #city').prop('disabled', false);
+				$('#genderGroup input').prop('disabled', false);
+				
+				// 顯示上傳檔案與驗證碼欄位
+				$('.edit-hidden-item').show();
+				
+				// 切換按鈕顯示
+				$('#btnEditMode').hide();
+				$('#btnSave, #btnCancel').show();
+			}
+
+			// 4. 切換回「隱碼唯讀」狀態
+			function resetToMaskedMode() {
+				clearTimeout(inactivityTimer);
+				
+				// 將欄位值切換回隱碼資料 (data-masked)
+				$('.maskable-field').each(function() {
+					$(this).val($(this).attr('data-masked'));
+					$(this).prop('readonly', true);
+				});
+				
+				// 鎖定其他表單元件
+				$('#educational, #city').prop('disabled', true);
+				$('#genderGroup input').prop('disabled', true);
+				
+				// 隱藏上傳檔案與驗證碼欄位
+				$('.edit-hidden-item').hide();
+				
+				// 切換按鈕顯示
+				$('#btnSave, #btnCancel, #btnEditMode').hide();
+				$('#btnEditMode').show();
+				
+				alert('已超過 5 分鐘無操作，為保障帳號安全，已自動恢復隱碼狀態。');
+			}
+
+			// 5. 5分鐘計時器重置機制（只要使用者在畫面上滑鼠移動、鍵盤輸入或點擊，就重新計時）
+			function resetInactivityTimer() {
+				clearTimeout(inactivityTimer);
+				inactivityTimer = setTimeout(function() {
+					resetToMaskedMode();
+				}, TIMEOUT_DURATION);
+			}
+
+			// 監聽使用者動作以重置計時器
+			$(document).on('mousemove keypress click', function() {
+				// 只有在編輯解鎖狀態下才啟動計時重置
+				if ($('#btnSave').is(':visible')) {
+					resetInactivityTimer();
+				}
+			});
+
+			// 6. 點擊取消按鈕
+			$('#btnCancel').on('click', function() {
+				resetToMaskedMode();
+			});
+
+			// 7. 點擊儲存按鈕
+			$('#memberForm').on('submit', function(e) {
+				e.preventDefault();
+				// 這裡可加入 AJAX 儲存邏輯
+				alert('資料儲存成功！');
+				resetToMaskedMode(); // 儲存後可視需求切回隱碼或保持
+			});
+		</script>
 		
 	</body>
 </html>

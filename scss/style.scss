@@ -2237,9 +2237,15 @@ label[for=page_select] select{
 	.search_icon{
 		position: absolute;
 		right: 15px;
-    top: 17px;
+    	top: 14px;
 		border:none;
 		background: transparent;
+		i{
+			color:$d-color-01;
+		}
+		&:hover i,&:focus i{
+			color:$d-color-01-d;
+		}
 	}
 }
 
