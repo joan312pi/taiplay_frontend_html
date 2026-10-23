@@ -2420,6 +2420,7 @@ label[for=page_select] select {
   color: #22a5a8;
   font-size: 1.3em;
   font-weight: bold;
+  white-space: nowrap;
 }
 .expense_total .average {
   float: left;
@@ -2431,6 +2432,7 @@ label[for=page_select] select {
   color: #FAC535;
   font-size: 1.3em;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 /*expense_list*/
@@ -2473,6 +2475,7 @@ label[for=page_select] select {
   font-weight: bold;
   color: #333;
   text-align: right;
+  white-space: nowrap;
 }
 
 /*expense_type*/

@@ -2701,6 +2701,7 @@ label[for=page_select] select{
 			color:$d-color-01;
 			font-size: 1.3em;
 			font-weight: bold;
+			white-space:nowrap;
 		}
 	}
 	.average{
@@ -2712,6 +2713,7 @@ label[for=page_select] select{
 			color:$d-color-05;
 			font-size: 1.3em;
 			font-weight: bold;
+			white-space:nowrap;
 		}
 	}
 }
@@ -2755,6 +2757,7 @@ label[for=page_select] select{
 			font-weight: bold;
 			color:#333;
 			text-align: right;
+			white-space:nowrap;
 		}
 	}
 }
