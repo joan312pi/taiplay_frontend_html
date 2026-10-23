@@ -642,6 +642,15 @@ img::-moz-selection {
 }
 
 /*Modal*/
+body.modal-open {
+  overflow: hidden !important;
+  padding-right: 0 !important;
+}
+
+.modal {
+  overscroll-behavior: contain;
+}
+
 .modal-header .modal-title {
   font-size: 1.4em;
   color: #000;
@@ -652,7 +661,8 @@ img::-moz-selection {
 
 .modal-body .top_btn_box {
   right: 20px !important;
-  top: 15px !important;
+  top: 10px !important;
+  position: absolute;
 }
 .modal-body .form-check-label {
   margin: 0px 15px 10px 0;
@@ -1197,23 +1207,25 @@ img::-moz-selection {
   border-bottom: none;
 }
 .favorite_list .item input[type=checkbox] {
-  display: inline-block;
+  float: left;
+  width: 30px;
   margin: 10px;
 }
 .favorite_list .item a {
   vertical-align: top;
-  padding: 0 0 0 10px;
-  display: inline-block;
+  float: left;
+  width: calc(100% - 50px);
 }
 .favorite_list .item a .img {
   width: 140px;
   border-radius: 10px;
   overflow: hidden;
-  display: inline-block;
+  float: left;
   vertical-align: top;
 }
 .favorite_list .item a .font {
-  display: inline-block;
+  float: left;
+  width: calc(100% - 140px);
   vertical-align: top;
   padding: 10px;
 }
@@ -3511,7 +3523,7 @@ a:hover .imh_down img {
     padding: 5px 20px 5px 50px;
   }
   .favorite_list .item a .img {
-    width: 120px;
+    width: 100px;
   }
   /*map_main*/
   .map_main {

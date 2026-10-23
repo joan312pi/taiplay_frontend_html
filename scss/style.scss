@@ -755,6 +755,13 @@ img::-moz-selection {
 
 
 /*Modal*/
+body.modal-open {
+  overflow: hidden !important;
+  padding-right: 0 !important;
+}
+.modal {
+  overscroll-behavior: contain;
+}
 .modal-header{
 	.modal-title{
 		font-size: 1.4em;
@@ -768,7 +775,8 @@ img::-moz-selection {
 .modal-body{
 	.top_btn_box{
 		right: 20px !important;
-		top: 15px !important;
+		top: 10px !important;
+		position: absolute;
 	}
 	.form-check-label{
 		margin:0px 15px 10px 0;
@@ -1352,22 +1360,24 @@ img::-moz-selection {
 			border-bottom:none;
 		}
 		input[type=checkbox]{
-			display: inline-block;
+			float: left;
+			width: 30px;
 			margin: 10px;
 		}
 		a{
 			vertical-align: top;
-			padding: 0 0 0 10px;
-			display: inline-block;
+			float: left;
+			width: calc(100% - 50px);
 			.img{
 				width: 140px;
 				border-radius: 10px;
 				overflow: hidden;
-				display: inline-block;
+				float: left;
 				vertical-align: top;
 			}
 			.font{
-				display: inline-block;
+				float: left;
+				width: calc(100% - 140px);
 				vertical-align: top;
 				padding: 10px;
 				.title{
@@ -4074,7 +4084,7 @@ h5{
 	.item{
 		a{
 			.img{
-				width: 120px;
+				width: 100px;
 			}
 		}
 	}
