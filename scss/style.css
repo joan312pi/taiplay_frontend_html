@@ -399,6 +399,21 @@ hr {
   max-width: 100px;
 }
 
+.fa-sr-only,
+.fa-sr-only-focusable:not(:focus),
+.sr-only,
+.sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 /*文字選取變色*/
 ::-moz-selection {
   background: #3367D1;
@@ -1974,25 +1989,25 @@ label[for=page_select] select {
   margin-top: 5px;
 }
 
-/*place_rankings_list*/
-.place_rankings_list {
+/*place_popular_list*/
+.place_popular_list {
   float: left;
   width: 100%;
   padding-bottom: 30px;
 }
-.place_rankings_list .item {
+.place_popular_list .item {
   position: relative;
   float: left;
   width: 100%;
   padding: 20px;
 }
-.place_rankings_list .item .favorite_box {
+.place_popular_list .item .favorite_box {
   position: absolute;
   left: 210px;
   top: 45px;
   z-index: 9;
 }
-.place_rankings_list .item .box {
+.place_popular_list .item .box {
   width: 100%;
   float: left;
   border-radius: 20px;
@@ -2003,12 +2018,12 @@ label[for=page_select] select {
   border-radius: 10px;
   box-shadow: 0 2px 15px 2px rgba(0, 0, 0, 0.1);
 }
-.place_rankings_list .item .img {
+.place_popular_list .item .img {
   width: 200px;
   float: left;
   position: relative;
 }
-.place_rankings_list .item .img .tag {
+.place_popular_list .item .img .tag {
   position: absolute;
   width: 35px;
   height: 50px;
@@ -2024,23 +2039,23 @@ label[for=page_select] select {
   text-align: center;
   padding-top: 10px;
 }
-.place_rankings_list .item .img img {
+.place_popular_list .item .img img {
   width: 100%;
   border-radius: 10px;
 }
-.place_rankings_list .item .font {
+.place_popular_list .item .font {
   width: calc(100% - 200px);
   float: left;
   padding: 15px 20px;
 }
-.place_rankings_list .item .font .title {
+.place_popular_list .item .font .title {
   float: left;
   width: calc(100% - 70px);
   font-size: 1.2em;
   font-weight: bold;
   color: #333;
 }
-.place_rankings_list .item .font .city {
+.place_popular_list .item .font .city {
   font-size: 0.7em;
   background: #ec6a4a;
   color: #fff;
@@ -2051,12 +2066,12 @@ label[for=page_select] select {
   line-height: 190%;
   vertical-align: top;
 }
-.place_rankings_list .item .font .star {
+.place_popular_list .item .font .star {
   float: right;
   width: 70px;
   text-align: right;
 }
-.place_rankings_list .item .font .con_font {
+.place_popular_list .item .font .con_font {
   float: left;
   width: 100%;
   margin-top: 10px;
@@ -3197,35 +3212,35 @@ a:hover .imh_down img {
   .place_other .item {
     width: 33.3333333333%;
   }
-  /*place_rankings_list*/
-  .place_rankings_list .item:nth-child(1), .place_rankings_list .item:nth-child(2) {
+  /*place_popular_list*/
+  .place_popular_list .item:nth-child(1), .place_popular_list .item:nth-child(2) {
     width: 50%;
   }
-  .place_rankings_list .item:nth-child(1) .favorite_box, .place_rankings_list .item:nth-child(2) .favorite_box {
+  .place_popular_list .item:nth-child(1) .favorite_box, .place_popular_list .item:nth-child(2) .favorite_box {
     left: auto;
     right: 30px;
     top: 30px;
   }
-  .place_rankings_list .item:nth-child(1) .box, .place_rankings_list .item:nth-child(2) .box {
+  .place_popular_list .item:nth-child(1) .box, .place_popular_list .item:nth-child(2) .box {
     padding: 0;
   }
-  .place_rankings_list .item:nth-child(1) .img, .place_rankings_list .item:nth-child(2) .img {
+  .place_popular_list .item:nth-child(1) .img, .place_popular_list .item:nth-child(2) .img {
     width: 100%;
   }
-  .place_rankings_list .item:nth-child(1) .img .tag, .place_rankings_list .item:nth-child(2) .img .tag {
+  .place_popular_list .item:nth-child(1) .img .tag, .place_popular_list .item:nth-child(2) .img .tag {
     width: 47px;
     height: 61px;
     left: 15px;
     font-size: 1.25em;
     padding-top: 15px;
   }
-  .place_rankings_list .item:nth-child(1) .img img, .place_rankings_list .item:nth-child(2) .img img {
+  .place_popular_list .item:nth-child(1) .img img, .place_popular_list .item:nth-child(2) .img img {
     border-radius: 0;
   }
-  .place_rankings_list .item:nth-child(1) .font, .place_rankings_list .item:nth-child(2) .font {
+  .place_popular_list .item:nth-child(1) .font, .place_popular_list .item:nth-child(2) .font {
     width: 100%;
   }
-  .place_rankings_list .item:nth-child(1) .font .title, .place_rankings_list .item:nth-child(2) .font .title {
+  .place_popular_list .item:nth-child(1) .font .title, .place_popular_list .item:nth-child(2) .font .title {
     font-size: 1.1em;
   }
   /*trip_list*/
@@ -3302,32 +3317,32 @@ a:hover .imh_down img {
   .place_other .item {
     width: 16.6666666667%;
   }
-  /*place_rankings_list*/
-  .place_rankings_list .item:nth-child(1), .place_rankings_list .item:nth-child(2), .place_rankings_list .item:nth-child(3) {
+  /*place_popular_list*/
+  .place_popular_list .item:nth-child(1), .place_popular_list .item:nth-child(2), .place_popular_list .item:nth-child(3) {
     width: 33.3333333333%;
   }
-  .place_rankings_list .item:nth-child(1) .favorite_box, .place_rankings_list .item:nth-child(2) .favorite_box, .place_rankings_list .item:nth-child(3) .favorite_box {
+  .place_popular_list .item:nth-child(1) .favorite_box, .place_popular_list .item:nth-child(2) .favorite_box, .place_popular_list .item:nth-child(3) .favorite_box {
     left: auto;
     right: 30px;
     top: 30px;
   }
-  .place_rankings_list .item:nth-child(1) .box, .place_rankings_list .item:nth-child(2) .box, .place_rankings_list .item:nth-child(3) .box {
+  .place_popular_list .item:nth-child(1) .box, .place_popular_list .item:nth-child(2) .box, .place_popular_list .item:nth-child(3) .box {
     padding: 0;
   }
-  .place_rankings_list .item:nth-child(1) .img, .place_rankings_list .item:nth-child(2) .img, .place_rankings_list .item:nth-child(3) .img {
+  .place_popular_list .item:nth-child(1) .img, .place_popular_list .item:nth-child(2) .img, .place_popular_list .item:nth-child(3) .img {
     width: 100%;
   }
-  .place_rankings_list .item:nth-child(1) .img .tag, .place_rankings_list .item:nth-child(2) .img .tag, .place_rankings_list .item:nth-child(3) .img .tag {
+  .place_popular_list .item:nth-child(1) .img .tag, .place_popular_list .item:nth-child(2) .img .tag, .place_popular_list .item:nth-child(3) .img .tag {
     width: 47px;
     height: 61px;
     left: 15px;
     font-size: 1.25em;
     padding-top: 15px;
   }
-  .place_rankings_list .item:nth-child(1) .img img, .place_rankings_list .item:nth-child(2) .img img, .place_rankings_list .item:nth-child(3) .img img {
+  .place_popular_list .item:nth-child(1) .img img, .place_popular_list .item:nth-child(2) .img img, .place_popular_list .item:nth-child(3) .img img {
     border-radius: 0;
   }
-  .place_rankings_list .item:nth-child(1) .font, .place_rankings_list .item:nth-child(2) .font, .place_rankings_list .item:nth-child(3) .font {
+  .place_popular_list .item:nth-child(1) .font, .place_popular_list .item:nth-child(2) .font, .place_popular_list .item:nth-child(3) .font {
     width: 100%;
   }
   /*trip_list*/
@@ -3688,29 +3703,29 @@ a:hover .imh_down img {
   .place_other .item {
     width: 33.3333333333%;
   }
-  /*place_rankings_list*/
-  .place_rankings_list .item:nth-child(1) .favorite_box, .place_rankings_list .item:nth-child(2) .favorite_box, .place_rankings_list .item:nth-child(3) .favorite_box {
+  /*place_popular_list*/
+  .place_popular_list .item:nth-child(1) .favorite_box, .place_popular_list .item:nth-child(2) .favorite_box, .place_popular_list .item:nth-child(3) .favorite_box {
     left: auto;
     right: 30px;
     top: 30px;
   }
-  .place_rankings_list .item:nth-child(1) .box, .place_rankings_list .item:nth-child(2) .box, .place_rankings_list .item:nth-child(3) .box {
+  .place_popular_list .item:nth-child(1) .box, .place_popular_list .item:nth-child(2) .box, .place_popular_list .item:nth-child(3) .box {
     padding: 0;
   }
-  .place_rankings_list .item:nth-child(1) .img, .place_rankings_list .item:nth-child(2) .img, .place_rankings_list .item:nth-child(3) .img {
+  .place_popular_list .item:nth-child(1) .img, .place_popular_list .item:nth-child(2) .img, .place_popular_list .item:nth-child(3) .img {
     width: 100%;
   }
-  .place_rankings_list .item:nth-child(1) .img .tag, .place_rankings_list .item:nth-child(2) .img .tag, .place_rankings_list .item:nth-child(3) .img .tag {
+  .place_popular_list .item:nth-child(1) .img .tag, .place_popular_list .item:nth-child(2) .img .tag, .place_popular_list .item:nth-child(3) .img .tag {
     width: 47px;
     height: 61px;
     left: 15px;
     font-size: 1.25em;
     padding-top: 15px;
   }
-  .place_rankings_list .item:nth-child(1) .img img, .place_rankings_list .item:nth-child(2) .img img, .place_rankings_list .item:nth-child(3) .img img {
+  .place_popular_list .item:nth-child(1) .img img, .place_popular_list .item:nth-child(2) .img img, .place_popular_list .item:nth-child(3) .img img {
     border-radius: 0;
   }
-  .place_rankings_list .item:nth-child(1) .font, .place_rankings_list .item:nth-child(2) .font, .place_rankings_list .item:nth-child(3) .font {
+  .place_popular_list .item:nth-child(1) .font, .place_popular_list .item:nth-child(2) .font, .place_popular_list .item:nth-child(3) .font {
     width: 100%;
   }
   /*trip_list*/
@@ -3776,25 +3791,25 @@ a:hover .imh_down img {
   .place_other .item {
     width: 50%;
   }
-  /*place_rankings_list*/
-  .place_rankings_list .item .favorite_box {
+  /*place_popular_list*/
+  .place_popular_list .item .favorite_box {
     left: auto;
     right: 50px;
     top: 50px;
   }
-  .place_rankings_list .item .img {
+  .place_popular_list .item .img {
     width: 100%;
   }
-  .place_rankings_list .item .font {
+  .place_popular_list .item .font {
     width: 100%;
     padding: 15px 0;
   }
-  .place_rankings_list .item:nth-child(1) .favorite_box, .place_rankings_list .item:nth-child(2) .favorite_box, .place_rankings_list .item:nth-child(3) .favorite_box {
+  .place_popular_list .item:nth-child(1) .favorite_box, .place_popular_list .item:nth-child(2) .favorite_box, .place_popular_list .item:nth-child(3) .favorite_box {
     left: auto;
     right: 30px;
     top: 30px;
   }
-  .place_rankings_list .item:nth-child(1) .font, .place_rankings_list .item:nth-child(2) .font, .place_rankings_list .item:nth-child(3) .font {
+  .place_popular_list .item:nth-child(1) .font, .place_popular_list .item:nth-child(2) .font, .place_popular_list .item:nth-child(3) .font {
     padding: 15px 20px;
   }
   /*trip_list*/

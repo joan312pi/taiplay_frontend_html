@@ -484,6 +484,20 @@ hr{
 .w-100px{
 	max-width:100px;
 }
+.fa-sr-only,
+.fa-sr-only-focusable:not(:focus),
+.sr-only,
+.sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
 
 
 /*文字選取變色*/
@@ -2242,8 +2256,8 @@ label[for=page_select] select{
 }
 
 
-/*place_rankings_list*/
-.place_rankings_list{
+/*place_popular_list*/
+.place_popular_list{
 	float: left;
 	width:100%;
 	padding-bottom: 30px;
@@ -3568,8 +3582,8 @@ header{
 }
 
 
-/*place_rankings_list*/
-.place_rankings_list{
+/*place_popular_list*/
+.place_popular_list{
 	.item{
 		&:nth-child(1),&:nth-child(2){
 			width:calc(100% / 2);
@@ -3728,8 +3742,8 @@ h4,.title_01{
 }
 
 
-/*place_rankings_list*/
-.place_rankings_list{
+/*place_popular_list*/
+.place_popular_list{
 	.item{
 		&:nth-child(1),&:nth-child(2),&:nth-child(3){
 			width:calc(100% / 3);
@@ -4251,8 +4265,8 @@ h5{
 }
 
 
-/*place_rankings_list*/
-.place_rankings_list{
+/*place_popular_list*/
+.place_popular_list{
 	.item{
 		&:nth-child(1),&:nth-child(2),&:nth-child(3){
 			.favorite_box{
@@ -4390,8 +4404,8 @@ h5{
 }
 
 
-/*place_rankings_list*/
-.place_rankings_list{
+/*place_popular_list*/
+.place_popular_list{
 	.item{
 		.favorite_box{
 			left:auto;
